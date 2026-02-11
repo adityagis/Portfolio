@@ -6,13 +6,15 @@
     <title>Aditya Kumar Jha | Geoinformatics Professional</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Add Three.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <span class="logo-icon">◈</span> AKJ
+                <span class="logo-icon">◈</span> Aditya Jha
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
@@ -35,7 +37,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg-grid"></div>
+        <!-- Remove hero-bg-grid; replace with Earth canvas -->
+        <canvas id="earthCanvas"></canvas>
         <div class="hero-particles" id="particles"></div>
         <div class="hero-container">
             <div class="hero-content">
@@ -97,6 +100,11 @@
             <span data-en="Scroll to explore" data-hi="स्क्रॉल करें">Scroll to explore</span>
             <div class="scroll-line"></div>
         </div>
+        <!-- Day/Night Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Day/Night Mode">
+            <span class="toggle-icon">☀️</span> <!-- Starts in Day mode -->
+            <span class="toggle-text" data-en="Night Mode" data-hi="नाइट मोड">Night Mode</span>
+        </button>
     </section>
 
     <!-- Quick Overview -->
