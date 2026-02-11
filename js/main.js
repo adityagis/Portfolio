@@ -149,3 +149,108 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
     }
 });
+
+// ===== 3D Rotating Earth Background =====
+const earthCanvas = document.getElementById('earthCanvas');
+if (earthCanvas) {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 2.5; // Closer view for background fill
+
+    const renderer = new THREE.WebGLRenderer({ canvas: earthCanvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    const textureLoader = new THREE.TextureLoader();
+    const dayTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg');
+    const nightTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/8k_earth_nightmap.jpg');
+
+    // Earth sphere
+    const earthGeometry = new THREE.SphereGeometry(1, 64, 64);
+    const earthMaterial = new THREE.MeshPhongMaterial({
+        map: dayTexture,
+        shininess: 10,
+        emissive: new THREE.Color(0x000000),      // Start with no emission
+        emissiveIntensity: 0
+    });
+    const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+    scene.add(earth);
+
+    // Clouds layer (slightly larger sphere)
+    const cloudsGeometry = new THREE.SphereGeometry(1.01, 64, 64); // Slightly larger
+    const cloudsTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/8k_earth_clouds.jpg');
+    const cloudsMaterial = new THREE.MeshPhongMaterial({
+        map: cloudsTexture,
+        transparent: true,
+        opacity: 0.8
+    });
+    const clouds = new THREE.Mesh(cloudsGeometry, cloudsMaterial);
+    scene.add(clouds);
+
+    // Lights for colorful pop
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    directionalLight.position.set(5, 3, 5);
+    scene.add(directionalLight);
+
+    const ambientLight = new THREE.AmbientLight(0x4040ff, 0.6); // Blue ambient for atmosphere glow
+    scene.add(ambientLight);
+
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        earth.rotation.y += 0.0005; // Slow rotation (~2 min per full spin)
+        clouds.rotation.y += 0.0007; // Clouds rotate slightly faster/different direction
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // ===== Day/Night Toggle =====
+    const themeToggle = document.getElementById('themeToggle');
+    let isNightMode = false;
+
+    function toggleDayNight() {
+        isNightMode = !isNightMode;
+
+        if (isNightMode) {
+            // Night mode: show city lights, darker ambient
+            earthMaterial.map = nightTexture;          // Switch to night map
+            earthMaterial.emissiveMap = nightTexture;  // Glow from lights
+            earthMaterial.emissive = new THREE.Color(0x111144); // Slight blue tint to lights
+            earthMaterial.emissiveIntensity = 1.2;
+            ambientLight.intensity = 0.15;             // Dim ambient
+            directionalLight.intensity = 0.4;          // Weaker sun
+            themeToggle.classList.add('night');
+            themeToggle.querySelector('.toggle-icon').textContent = '🌙';
+            themeToggle.querySelector('.toggle-text').textContent = currentLang === 'hi' ? 'डे मोड' : 'Day Mode';
+        } else {
+            // Day mode: normal colors
+            earthMaterial.map = dayTexture;            // Back to day map
+            earthMaterial.emissiveMap = null;
+            earthMaterial.emissiveIntensity = 0;
+            ambientLight.intensity = 0.6;
+            directionalLight.intensity = 1.2;
+            themeToggle.classList.remove('night');
+            themeToggle.querySelector('.toggle-icon').textContent = '☀️';
+            themeToggle.querySelector('.toggle-text').textContent = currentLang === 'hi' ? 'नाइट मोड' : 'Night Mode';
+        }
+
+        earthMaterial.needsUpdate = true; // Important!
+    }
+
+    // Toggle click handler
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleDayNight);
+    }
+
+    // Optional: Respect system dark mode preference on load
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleDayNight(); // Start in night if user prefers dark
+    }
+}
