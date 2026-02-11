@@ -1,3 +1,292 @@
+// ===== 3D Earth Globe with Three.js =====
+let scene, camera, renderer, earth, clouds, stars;
+let earthDayTexture, earthNightTexture, cloudTexture;
+let isNightMode = false;
+let animationFrameId;
+
+function initEarth() {
+    const canvas = document.getElementById('earthCanvas');
+    if (!canvas) return;
+
+    // Scene setup
+    scene = new THREE.Scene();
+    
+    // Camera setup
+    camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+    );
+    camera.position.z = 2.5;
+
+    // Renderer setup
+    renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+        antialias: true
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Lighting for day mode
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    directionalLight.position.set(5, 3, 5);
+    scene.add(directionalLight);
+
+    // Create starfield
+    createStarfield();
+
+    // Texture loader
+    const textureLoader = new THREE.TextureLoader();
+
+    // Load textures from public CDN sources
+    // Using high-quality Earth textures
+    const earthDayUrl = 'https://raw.githubusercontent.com/turban/webgl-earth/master/images/2_no_clouds_4k.jpg';
+    const earthNightUrl = 'https://raw.githubusercontent.com/turban/webgl-earth/master/images/5_night_4k.jpg';
+    const cloudUrl = 'https://raw.githubusercontent.com/turban/webgl-earth/master/images/fair_clouds_4k.png';
+
+    // Load day texture
+    textureLoader.load(
+        earthDayUrl,
+        (texture) => {
+            earthDayTexture = texture;
+            createEarth();
+        },
+        undefined,
+        (error) => {
+            console.warn('Day texture failed, using fallback');
+            createEarth(); // Create with basic material
+        }
+    );
+
+    // Load night texture
+    textureLoader.load(
+        earthNightUrl,
+        (texture) => {
+            earthNightTexture = texture;
+        },
+        undefined,
+        (error) => {
+            console.warn('Night texture failed');
+        }
+    );
+
+    // Load cloud texture
+    textureLoader.load(
+        cloudUrl,
+        (texture) => {
+            cloudTexture = texture;
+            if (earth) createClouds();
+        },
+        undefined,
+        (error) => {
+            console.warn('Cloud texture failed');
+        }
+    );
+
+    // Handle window resize
+    window.addEventListener('resize', onWindowResize, false);
+}
+
+function createStarfield() {
+    const starsGeometry = new THREE.BufferGeometry();
+    const starsMaterial = new THREE.PointsMaterial({
+        color: 0xffffff,
+        size: 0.7,
+        transparent: true,
+        opacity: 0.8
+    });
+
+    const starsVertices = [];
+    for (let i = 0; i < 10000; i++) {
+        const x = (Math.random() - 0.5) * 2000;
+        const y = (Math.random() - 0.5) * 2000;
+        const z = (Math.random() - 0.5) * 2000;
+        starsVertices.push(x, y, z);
+    }
+
+    starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+    stars = new THREE.Points(starsGeometry, starsMaterial);
+    scene.add(stars);
+}
+
+function createEarth() {
+    const geometry = new THREE.SphereGeometry(1, 64, 64);
+    
+    let material;
+    if (earthDayTexture) {
+        material = new THREE.MeshPhongMaterial({
+            map: earthDayTexture,
+            shininess: 5,
+            transparent: false
+        });
+    } else {
+        // Fallback material with Earth-like colors
+        material = new THREE.MeshPhongMaterial({
+            color: 0x2d6a4f,
+            shininess: 5,
+            transparent: false
+        });
+    }
+
+    earth = new THREE.Mesh(geometry, material);
+    earth.rotation.y = -Math.PI / 2; // Rotate to show better view
+    scene.add(earth);
+
+    // Create clouds if texture is already loaded
+    if (cloudTexture) createClouds();
+
+    // Start animation
+    animate();
+}
+
+function createClouds() {
+    if (!cloudTexture || clouds) return;
+    
+    const cloudGeometry = new THREE.SphereGeometry(1.01, 64, 64);
+    const cloudMaterial = new THREE.MeshPhongMaterial({
+        map: cloudTexture,
+        transparent: true,
+        opacity: 0.4,
+        depthWrite: false
+    });
+
+    clouds = new THREE.Mesh(cloudGeometry, cloudMaterial);
+    scene.add(clouds);
+}
+
+function animate() {
+    animationFrameId = requestAnimationFrame(animate);
+
+    // Slow rotation
+    if (earth) {
+        earth.rotation.y += 0.001;
+    }
+    if (clouds) {
+        clouds.rotation.y += 0.0012; // Slightly faster than Earth
+    }
+    if (stars) {
+        stars.rotation.y += 0.0001;
+    }
+
+    renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function toggleEarthMode() {
+    isNightMode = !isNightMode;
+    const toggleBtn = document.getElementById('earthModeToggle');
+    const toggleIcon = toggleBtn.querySelector('.toggle-icon');
+    const toggleText = toggleBtn.querySelector('.toggle-text');
+    
+    if (isNightMode) {
+        // Switch to night mode
+        toggleBtn.classList.add('night-mode');
+        toggleIcon.textContent = '🌙';
+        
+        // Update text based on current language
+        const currentLang = document.querySelector('.lang-btn.active').getAttribute('data-lang');
+        if (currentLang === 'hi') {
+            toggleText.textContent = 'रात मोड';
+            toggleText.setAttribute('data-hi', 'रात मोड');
+        } else {
+            toggleText.textContent = 'Night Mode';
+            toggleText.setAttribute('data-en', 'Night Mode');
+        }
+        
+        // Update Earth material to night texture
+        if (earth && earthNightTexture) {
+            earth.material.map = earthNightTexture;
+            earth.material.emissive = new THREE.Color(0x112244);
+            earth.material.emissiveIntensity = 0.3;
+            earth.material.needsUpdate = true;
+        }
+        
+        // Adjust lighting for night mode
+        scene.children.forEach(child => {
+            if (child instanceof THREE.AmbientLight) {
+                child.intensity = 0.15;
+            } else if (child instanceof THREE.DirectionalLight) {
+                child.intensity = 0.3;
+            }
+        });
+        
+        // Make clouds less visible
+        if (clouds) {
+            clouds.material.opacity = 0.15;
+        }
+        
+        // Brighten stars
+        if (stars) {
+            stars.material.opacity = 1;
+            stars.material.size = 1;
+        }
+        
+    } else {
+        // Switch to day mode
+        toggleBtn.classList.remove('night-mode');
+        toggleIcon.textContent = '☀️';
+        
+        // Update text based on current language
+        const currentLang = document.querySelector('.lang-btn.active').getAttribute('data-lang');
+        if (currentLang === 'hi') {
+            toggleText.textContent = 'दिन मोड';
+            toggleText.setAttribute('data-hi', 'दिन मोड');
+        } else {
+            toggleText.textContent = 'Day Mode';
+            toggleText.setAttribute('data-en', 'Day Mode');
+        }
+        
+        // Update Earth material to day texture
+        if (earth && earthDayTexture) {
+            earth.material.map = earthDayTexture;
+            earth.material.emissive = new THREE.Color(0x000000);
+            earth.material.emissiveIntensity = 0;
+            earth.material.needsUpdate = true;
+        }
+        
+        // Restore lighting for day mode
+        scene.children.forEach(child => {
+            if (child instanceof THREE.AmbientLight) {
+                child.intensity = 0.4;
+            } else if (child instanceof THREE.DirectionalLight) {
+                child.intensity = 1.2;
+            }
+        });
+        
+        // Restore cloud visibility
+        if (clouds) {
+            clouds.material.opacity = 0.4;
+        }
+        
+        // Dim stars
+        if (stars) {
+            stars.material.opacity = 0.8;
+            stars.material.size = 0.7;
+        }
+    }
+}
+
+// Initialize Earth when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initEarth();
+    
+    // Add event listener to toggle button
+    const earthToggle = document.getElementById('earthModeToggle');
+    if (earthToggle) {
+        earthToggle.addEventListener('click', toggleEarthMode);
+    }
+});
+
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -94,8 +383,25 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
                 }
             }
         });
+        
+        // Update Earth mode toggle text
+        updateEarthToggleText();
     });
 });
+
+function updateEarthToggleText() {
+    const toggleBtn = document.getElementById('earthModeToggle');
+    if (!toggleBtn) return;
+    
+    const toggleText = toggleBtn.querySelector('.toggle-text');
+    const currentLang = document.querySelector('.lang-btn.active').getAttribute('data-lang');
+    
+    if (isNightMode) {
+        toggleText.textContent = currentLang === 'hi' ? 'रात मोड' : 'Night Mode';
+    } else {
+        toggleText.textContent = currentLang === 'hi' ? 'दिन मोड' : 'Day Mode';
+    }
+}
 
 // ===== Particles Effect =====
 const particlesContainer = document.getElementById('particles');
@@ -149,108 +455,3 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
     }
 });
-
-// ===== 3D Rotating Earth Background =====
-const earthCanvas = document.getElementById('earthCanvas');
-if (earthCanvas) {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 2.5; // Closer view for background fill
-
-    const renderer = new THREE.WebGLRenderer({ canvas: earthCanvas, alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-
-    const textureLoader = new THREE.TextureLoader();
-    const dayTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg');
-    const nightTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/8k_earth_nightmap.jpg');
-
-    // Earth sphere
-    const earthGeometry = new THREE.SphereGeometry(1, 64, 64);
-    const earthMaterial = new THREE.MeshPhongMaterial({
-        map: dayTexture,
-        shininess: 10,
-        emissive: new THREE.Color(0x000000),      // Start with no emission
-        emissiveIntensity: 0
-    });
-    const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-    scene.add(earth);
-
-    // Clouds layer (slightly larger sphere)
-    const cloudsGeometry = new THREE.SphereGeometry(1.01, 64, 64); // Slightly larger
-    const cloudsTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/8k_earth_clouds.jpg');
-    const cloudsMaterial = new THREE.MeshPhongMaterial({
-        map: cloudsTexture,
-        transparent: true,
-        opacity: 0.8
-    });
-    const clouds = new THREE.Mesh(cloudsGeometry, cloudsMaterial);
-    scene.add(clouds);
-
-    // Lights for colorful pop
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
-    directionalLight.position.set(5, 3, 5);
-    scene.add(directionalLight);
-
-    const ambientLight = new THREE.AmbientLight(0x4040ff, 0.6); // Blue ambient for atmosphere glow
-    scene.add(ambientLight);
-
-    // Animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-        earth.rotation.y += 0.0005; // Slow rotation (~2 min per full spin)
-        clouds.rotation.y += 0.0007; // Clouds rotate slightly faster/different direction
-        renderer.render(scene, camera);
-    }
-    animate();
-
-    // Resize handler
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-
-    // ===== Day/Night Toggle =====
-    const themeToggle = document.getElementById('themeToggle');
-    let isNightMode = false;
-
-    function toggleDayNight() {
-        isNightMode = !isNightMode;
-
-        if (isNightMode) {
-            // Night mode: show city lights, darker ambient
-            earthMaterial.map = nightTexture;          // Switch to night map
-            earthMaterial.emissiveMap = nightTexture;  // Glow from lights
-            earthMaterial.emissive = new THREE.Color(0x111144); // Slight blue tint to lights
-            earthMaterial.emissiveIntensity = 1.2;
-            ambientLight.intensity = 0.15;             // Dim ambient
-            directionalLight.intensity = 0.4;          // Weaker sun
-            themeToggle.classList.add('night');
-            themeToggle.querySelector('.toggle-icon').textContent = '🌙';
-            themeToggle.querySelector('.toggle-text').textContent = currentLang === 'hi' ? 'डे मोड' : 'Day Mode';
-        } else {
-            // Day mode: normal colors
-            earthMaterial.map = dayTexture;            // Back to day map
-            earthMaterial.emissiveMap = null;
-            earthMaterial.emissiveIntensity = 0;
-            ambientLight.intensity = 0.6;
-            directionalLight.intensity = 1.2;
-            themeToggle.classList.remove('night');
-            themeToggle.querySelector('.toggle-icon').textContent = '☀️';
-            themeToggle.querySelector('.toggle-text').textContent = currentLang === 'hi' ? 'नाइट मोड' : 'Night Mode';
-        }
-
-        earthMaterial.needsUpdate = true; // Important!
-    }
-
-    // Toggle click handler
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleDayNight);
-    }
-
-    // Optional: Respect system dark mode preference on load
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        toggleDayNight(); // Start in night if user prefers dark
-    }
-}
