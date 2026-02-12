@@ -80,3 +80,20 @@ const pg = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a:not(.nav-cta-link)').forEach(a => {
     a.classList.toggle('active', a.getAttribute('href').split('/').pop() === pg);
 });
+// GoatCounter Visitor Count
+(function() {
+    var el = document.getElementById('totalVisits');
+    if (!el) return;
+    var r = new XMLHttpRequest();
+    r.open('GET', 'https://adityagis.goatcounter.com/counter/' + encodeURIComponent('/') + '.json');
+    r.onload = function() {
+        if (r.status === 200) {
+            var data = JSON.parse(r.responseText);
+            el.textContent = data.count.toLocaleString('en-IN');
+        } else {
+            el.textContent = '—';
+        }
+    };
+    r.onerror = function() { el.textContent = '—'; };
+    r.send();
+})();
