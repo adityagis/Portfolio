@@ -81,28 +81,32 @@ document.querySelectorAll('.nav-links a:not(.nav-cta-link)').forEach(a => {
     a.classList.toggle('active', a.getAttribute('href').split('/').pop() === pg);
 });
 
-// ===== VISITOR COUNTER WITH ANIMATED COUNT-UP =====
+// ===== ENHANCED VISITOR COUNTER WITH MULTIPLE FALLBACKS =====
 (function initVisitorCounter() {
     const counterElement = document.getElementById('totalVisits');
     
     if (!counterElement) {
-        console.log('Visitor counter element not found');
+        console.log('❌ Visitor counter element (#totalVisits) not found in DOM');
         return;
     }
 
-    // Set initial loading state
+    console.log('✅ Visitor counter element found, initializing...');
     counterElement.textContent = '...';
 
-    // Animated counter function with easing
+    // Animated counter function
     function animateCounter(target, duration = 2000) {
-        let start = 0;
+        if (!target || target <= 0) {
+            console.log('⚠️ Invalid target value:', target);
+            counterElement.textContent = '---';
+            return;
+        }
+
+        console.log('🎬 Starting animation to:', target);
         const startTime = performance.now();
 
         function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
-            // Easing function for smooth animation (ease-out cubic)
             const easeOutCubic = 1 - Math.pow(1 - progress, 3);
             const current = Math.floor(target * easeOutCubic);
             
@@ -112,79 +116,129 @@ document.querySelectorAll('.nav-links a:not(.nav-cta-link)').forEach(a => {
                 requestAnimationFrame(updateCounter);
             } else {
                 counterElement.textContent = target.toLocaleString('en-IN');
+                console.log('✅ Animation complete. Final count:', target);
             }
         }
 
         requestAnimationFrame(updateCounter);
     }
 
-    // Primary: CountAPI (auto-increment on each visit)
-    const countAPIUrl = 'https://api.countapi.xyz/hit/adityagis-portfolio/total-visits';
-    
-    fetch(countAPIUrl)
+    // Method 1: Try CountAPI (Primary)
+    function tryCountAPI() {
+        console.log('🔄 Attempting CountAPI...');
+        const url = 'https://api.countapi.xyz/hit/adityagis-portfolio/total-visits';
+        
+        return fetch(url, { 
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache'
+        })
         .then(response => {
+            console.log('📡 CountAPI Response Status:', response.status);
             if (!response.ok) {
-                throw new Error(`CountAPI HTTP error! status: ${response.status}`);
+                throw new Error(`HTTP ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
-            if (data && typeof data.value === 'number') {
+            console.log('📊 CountAPI Data:', data);
+            if (data && typeof data.value === 'number' && data.value > 0) {
                 animateCounter(data.value);
-                console.log('✅ Visitor count loaded from CountAPI:', data.value);
-            } else {
-                throw new Error('Invalid CountAPI response');
+                return true;
             }
+            throw new Error('Invalid data structure');
         })
         .catch(error => {
-            console.log('⚠️ CountAPI failed, trying GoatCounter...', error.message);
-            
-            // Fallback: GoatCounter
-            const goatCounterUrl = 'https://adityagis.goatcounter.com/counter/' + encodeURIComponent('/') + '.json';
-            
-            fetch(goatCounterUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`GoatCounter HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data && data.count) {
-                        animateCounter(data.count);
-                        console.log('✅ Visitor count loaded from GoatCounter:', data.count);
-                    } else {
-                        throw new Error('Invalid GoatCounter response');
-                    }
-                })
-                .catch(gcError => {
-                    console.error('❌ Both counters failed:', gcError.message);
-                    counterElement.textContent = '---';
-                    counterElement.style.opacity = '0.5';
-                });
+            console.log('❌ CountAPI failed:', error.message);
+            return false;
         });
+    }
 
-    // Optional: Auto-refresh counter every 30 seconds (for live tracking effect)
+    // Method 2: Try GoatCounter (Fallback)
+    function tryGoatCounter() {
+        console.log('🔄 Attempting GoatCounter...');
+        const url = 'https://adityagis.goatcounter.com/counter/' + encodeURIComponent('/') + '.json';
+        
+        return fetch(url, {
+            method: 'GET',
+            mode: 'cors'
+        })
+        .then(response => {
+            console.log('📡 GoatCounter Response Status:', response.status);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('📊 GoatCounter Data:', data);
+            if (data && data.count && data.count > 0) {
+                animateCounter(data.count);
+                return true;
+            }
+            throw new Error('Invalid data structure');
+        })
+        .catch(error => {
+            console.log('❌ GoatCounter failed:', error.message);
+            return false;
+        });
+    }
+
+    // Method 3: Use localStorage as last resort (for development/testing)
+    function useLocalStorageFallback() {
+        console.log('🔄 Using localStorage fallback...');
+        let count = parseInt(localStorage.getItem('visitor-count') || '0');
+        count += 1;
+        localStorage.setItem('visitor-count', count.toString());
+        animateCounter(count);
+        console.log('✅ LocalStorage count:', count);
+    }
+
+    // Execute counter with cascade fallback
+    async function loadCounter() {
+        try {
+            // Try CountAPI first
+            const countAPISuccess = await tryCountAPI();
+            if (countAPISuccess) return;
+
+            // Wait a bit, then try GoatCounter
+            console.log('⏳ Waiting 500ms before trying GoatCounter...');
+            await new Promise(resolve => setTimeout(resolve, 500));
+            
+            const goatCounterSuccess = await tryGoatCounter();
+            if (goatCounterSuccess) return;
+
+            // If both fail, use localStorage for testing
+            console.log('⚠️ All APIs failed, using localStorage fallback');
+            useLocalStorageFallback();
+
+        } catch (error) {
+            console.error('💥 Critical error in counter initialization:', error);
+            counterElement.textContent = '---';
+            counterElement.style.opacity = '0.5';
+        }
+    }
+
+    // Initialize counter
+    loadCounter();
+
+    // Auto-refresh every 60 seconds (optional)
     setInterval(() => {
-        fetch('https://api.countapi.xyz/get/adityagis-portfolio/total-visits')
-            .then(res => res.json())
-            .then(data => {
-                if (data && data.value) {
-                    const currentCount = parseInt(counterElement.textContent.replace(/,/g, '')) || 0;
-                    if (data.value > currentCount) {
-                        animateCounter(data.value, 1000); // Faster animation for refresh
-                    }
-                }
-            })
-            .catch(err => console.log('Counter refresh skipped:', err.message));
-    }, 30000); // 30 seconds
+        console.log('🔄 Auto-refreshing counter...');
+        tryCountAPI().then(success => {
+            if (!success) {
+                console.log('⏭️ Skipping auto-refresh, API not available');
+            }
+        });
+    }, 60000); // 60 seconds
 
 })();
 
 // ===== VISITOR COUNTER SCROLL REVEAL =====
-// Add visitor box to scroll reveal observer
 const visitorBox = document.querySelector('.visitor-box');
 if (visitorBox) {
     visitorBox.classList.add('reveal');
     obs.observe(visitorBox);
 }
+
+console.log('✅ Main.js loaded successfully');
