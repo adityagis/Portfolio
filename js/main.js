@@ -80,20 +80,111 @@ const pg = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a:not(.nav-cta-link)').forEach(a => {
     a.classList.toggle('active', a.getAttribute('href').split('/').pop() === pg);
 });
-// GoatCounter Visitor Count
-(function() {
-    var el = document.getElementById('totalVisits');
-    if (!el) return;
-    var r = new XMLHttpRequest();
-    r.open('GET', 'https://adityagis.goatcounter.com/counter/' + encodeURIComponent('/') + '.json');
-    r.onload = function() {
-        if (r.status === 200) {
-            var data = JSON.parse(r.responseText);
-            el.textContent = data.count.toLocaleString('en-IN');
-        } else {
-            el.textContent = '—';
+
+// ===== VISITOR COUNTER WITH ANIMATED COUNT-UP =====
+(function initVisitorCounter() {
+    const counterElement = document.getElementById('totalVisits');
+    
+    if (!counterElement) {
+        console.log('Visitor counter element not found');
+        return;
+    }
+
+    // Set initial loading state
+    counterElement.textContent = '...';
+
+    // Animated counter function with easing
+    function animateCounter(target, duration = 2000) {
+        let start = 0;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation (ease-out cubic)
+            const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(target * easeOutCubic);
+            
+            counterElement.textContent = current.toLocaleString('en-IN');
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counterElement.textContent = target.toLocaleString('en-IN');
+            }
         }
-    };
-    r.onerror = function() { el.textContent = '—'; };
-    r.send();
+
+        requestAnimationFrame(updateCounter);
+    }
+
+    // Primary: CountAPI (auto-increment on each visit)
+    const countAPIUrl = 'https://api.countapi.xyz/hit/adityagis-portfolio/total-visits';
+    
+    fetch(countAPIUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`CountAPI HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data && typeof data.value === 'number') {
+                animateCounter(data.value);
+                console.log('✅ Visitor count loaded from CountAPI:', data.value);
+            } else {
+                throw new Error('Invalid CountAPI response');
+            }
+        })
+        .catch(error => {
+            console.log('⚠️ CountAPI failed, trying GoatCounter...', error.message);
+            
+            // Fallback: GoatCounter
+            const goatCounterUrl = 'https://adityagis.goatcounter.com/counter/' + encodeURIComponent('/') + '.json';
+            
+            fetch(goatCounterUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`GoatCounter HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.count) {
+                        animateCounter(data.count);
+                        console.log('✅ Visitor count loaded from GoatCounter:', data.count);
+                    } else {
+                        throw new Error('Invalid GoatCounter response');
+                    }
+                })
+                .catch(gcError => {
+                    console.error('❌ Both counters failed:', gcError.message);
+                    counterElement.textContent = '---';
+                    counterElement.style.opacity = '0.5';
+                });
+        });
+
+    // Optional: Auto-refresh counter every 30 seconds (for live tracking effect)
+    setInterval(() => {
+        fetch('https://api.countapi.xyz/get/adityagis-portfolio/total-visits')
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.value) {
+                    const currentCount = parseInt(counterElement.textContent.replace(/,/g, '')) || 0;
+                    if (data.value > currentCount) {
+                        animateCounter(data.value, 1000); // Faster animation for refresh
+                    }
+                }
+            })
+            .catch(err => console.log('Counter refresh skipped:', err.message));
+    }, 30000); // 30 seconds
+
 })();
+
+// ===== VISITOR COUNTER SCROLL REVEAL =====
+// Add visitor box to scroll reveal observer
+const visitorBox = document.querySelector('.visitor-box');
+if (visitorBox) {
+    visitorBox.classList.add('reveal');
+    obs.observe(visitorBox);
+}
