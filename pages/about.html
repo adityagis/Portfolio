@@ -1,219 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Aditya Kumar Jha</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Aditya Kumar Jha</title>
+  <meta name="description" content="About Aditya Kumar Jha: GIS engineer at Survey of India, former research intern at DRDO, and founder of the Geospatial Technology Club at NSUT.">
+  <meta name="author" content="Aditya Kumar Jha">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F5F5F2">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="canonical" href="https://adityagis.github.io/Portfolio/pages/about.html">
+  <meta property="og:title" content="About | Aditya Kumar Jha">
+  <meta property="og:description" content="About Aditya Kumar Jha: GIS engineer at Survey of India, former research intern at DRDO, and founder of the Geospatial Technology Club at NSUT.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adityagis.github.io/Portfolio/pages/about.html">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://adityagis.github.io/Portfolio/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aditya Kumar Jha, geoinformatics engineer. GIS, GNSS, Python and LiDAR.">
+  <meta property="og:site_name" content="Aditya Kumar Jha">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About | Aditya Kumar Jha">
+  <meta name="twitter:description" content="About Aditya Kumar Jha: GIS engineer at Survey of India, former research intern at DRDO, and founder of the Geospatial Technology Club at NSUT.">
+  <meta name="twitter:image" content="https://adityagis.github.io/Portfolio/assets/images/og-image.jpg">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try { if (localStorage.getItem('portfolio-color-mode') === 'color') d.setAttribute('data-mode', 'color'); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
-    <nav class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo"><span class="logo-mark">A</span>ditya<span class="logo-dot">.</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="research.html">Research & Consultancy</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="../index.html"><span class="nav-num">01</span>Home</a></li>
+          <li><a class="nav-link" href="../pages/about.html" aria-current="page"><span class="nav-num">02</span>About</a></li>
+          <li><a class="nav-link" href="../pages/projects.html"><span class="nav-num">03</span>Projects</a></li>
+          <li><a class="nav-link" href="../pages/research.html"><span class="nav-num">04</span>Research</a></li>
+          <li><a class="nav-link" href="../pages/skills.html"><span class="nav-num">05</span>Skills</a></li>
+          <li><a class="nav-link" href="../pages/contact.html"><span class="nav-num">06</span>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <button type="button" class="icon-btn js-search-open" aria-label="Search" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+        <button type="button" class="icon-btn js-menu-open" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="mode-switch">
+        <span class="mode-switch__label" data-side="mono">Mono</span>
+        <button type="button" class="mode-switch__btn" role="switch" aria-checked="false" aria-label="Color mode">
+          <span class="mode-switch__track"><span class="mode-switch__thumb"></span></span>
+        </button>
+        <span class="mode-switch__label" data-side="color">Color</span>
+      </div>
+      </div>
+      <form class="search-panel" id="search-panel" role="search" hidden>
+        <label class="visually-hidden" for="site-search">Search this site</label>
+        <input class="search-panel__field" id="site-search" type="search" placeholder="Search pages and projects" autocomplete="off">
+        <div class="search-panel__results" aria-live="polite"></div>
+      </form>
+    </div>
+  </header>
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <div class="drawer__backdrop"></div>
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+        <button type="button" class="icon-btn js-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer__body">
+        <nav class="drawer__nav" aria-label="Menu">
+          <ol>
+            <li><a href="../index.html"><span class="nav-num">01</span>Home</a></li>
+            <li><a href="../pages/about.html" aria-current="page"><span class="nav-num">02</span>About</a></li>
+            <li><a href="../pages/projects.html"><span class="nav-num">03</span>Projects</a></li>
+            <li><a href="../pages/research.html"><span class="nav-num">04</span>Research</a></li>
+            <li><a href="../pages/skills.html"><span class="nav-num">05</span>Skills</a></li>
+            <li><a href="../pages/contact.html"><span class="nav-num">06</span>Contact</a></li>
+          </ol>
+        </nav>
+        <ul class="drawer__links">
+          <li><a href="https://github.com/adityagis" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="mailto:adityajha976@gmail.com">Email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="../assets/Aditya_Jha_Resume.pdf" target="_blank" rel="noopener">Resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+        </ul>
+        <div class="drawer__foot">
+          <div class="drawer__foot-row">
+            <span class="mono mono--secondary">Display</span>
+            <div class="mode-switch">
+        <span class="mode-switch__label" data-side="mono">Mono</span>
+        <button type="button" class="mode-switch__btn" role="switch" aria-checked="false" aria-label="Color mode">
+          <span class="mode-switch__track"><span class="mode-switch__thumb"></span></span>
+        </button>
+        <span class="mode-switch__label" data-side="color">Color</span>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <div class="page-head__meta">
+          <p class="mono">02</p>
+          <p class="mono mono--secondary">About</p>
+        </div>
+        <h1 class="page-head__title">About me</h1>
+        <p class="page-head__lead">Geoinformatics engineer, based in Dehradun.</p>
+      </div>
+    </section>
+
+    <section class="section section--flush-top" aria-labelledby="story">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.1</p>
+        <div class="section-head__body">
+          <h2 id="story">My story</h2>
+        </div>
+      </header>
+        <div class="grid story">
+          <div class="story__text g-lg-7 g-md-8">
+            <p class="lead">I've been doing geospatial research for more than four years, including work at DRDO and at Survey of India's Geodetic &amp; Research Branch. Most of that work is about taking raw spatial data and automating the steps between the data and a decision.</p>
+            <p>At Survey of India I manage two wings. The NSRF Wing processes GNSS CORS data from 1023+ reference stations, and the HPL Wing maintains India's national vertical datum. My scripts brought GNSS processing down from 7 days to 3 days per station, and a month of levelling analysis now takes a single day. QA/QC checks such as the Tau test and global statistical validation run inside the scripts, so manual errors don't get through.</p>
+            <p>At DRDO's Defence Geoinformatics Research Establishment I processed about 3 million LiDAR points and 32 hyperspectral bands. I used them to build flood inundation models and terrain vulnerability assessments for defence planning and disaster preparedness.</p>
+            <p>I also started the Geospatial Technology Club at NSUT. It grew to 200+ members from across India, and we brought in industry professionals for talks and workshops.</p>
+            <p>I try to write code that someone else can pick up later: clean, documented, and built to keep working as the data grows. The work I enjoy most is research where the numbers have to be right.</p>
+            <div class="callout">
+              <p class="mono">Looking for</p>
+              <p>I'm looking for research roles, consulting work, and startups working on hard geospatial problems with real users. If that sounds like your team, get in touch.</p>
+              <a class="btn btn--primary" href="contact.html"><span>Get in touch</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+          <aside class="about-aside g-lg-4 g-md-8" aria-label="Profile">
+            <figure class="profile">
+              <div class="profile__frame"><img src="../assets/images/about.webp" alt="Portrait of Aditya Kumar Jha" width="400" height="500" decoding="async"></div>
+              <figcaption class="mono">Aditya Kumar Jha, Dehradun</figcaption>
+            </figure>
+            <div class="about-aside__info">
+            <dl class="facts">
+              <div><dt class="mono">Current role</dt><dd>GIS Engineer, Survey of India (G&amp;RB)</dd></div>
+              <div><dt class="mono">Consulting</dt><dd>Consulting Head, Uday GeoAnalytics Consultancy</dd></div>
+              <div><dt class="mono">Education</dt><dd>B.Tech GeoInformatics, NSUT Delhi (2025)</dd></div>
+              <div><dt class="mono">Location</dt><dd>Dehradun, India</dd></div>
+              <div><dt class="mono">Email</dt><dd><a class="facts__link" href="mailto:adityajha976@gmail.com">adityajha976@gmail.com</a></dd></div>
+            </dl>
+            <a class="btn btn--secondary btn--block" href="../assets/Aditya_Jha_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg><span>Download resume</span></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" aria-labelledby="approach">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.2</p>
+        <div class="section-head__body">
+          <h2 id="approach">Approach</h2>
+          <p class="section-head__lead">Three things that shape how I work.</p>
+        </div>
+      </header>
+        <div class="pillars" data-reveal>
+          <article class="pillar"><p class="mono mono--secondary">01</p><h3>Location technology</h3><p class="pillar__text">Everything I do starts with GIS, GNSS and remote sensing. That means GAMIT/GLOBK and PRIDE PPP-AR processing for 1023+ CORS stations, LiDAR and hyperspectral analysis, and drone mapping.</p></article>
+          <article class="pillar"><p class="mono mono--secondary">02</p><h3>From data to decisions</h3><p class="pillar__text">My pipelines have QA/QC checks built in (Tau test, global statistical validation), and they cut GNSS processing from 7 days to 3 days per station and a month of levelling analysis to one day.</p></article>
+          <article class="pillar"><p class="mono mono--secondary">03</p><h3>Work that gets used</h3><p class="pillar__text">I did flood risk planning for defence at DRDO, and I'm building SolarSight and Baadh Mitra at Uday GeoAnalytics Consultancy for rooftop solar and village flood alerts. I also started a Geospatial Technology Club at NSUT that grew to 200+ members.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="timeline">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.3</p>
+        <div class="section-head__body">
+          <h2 id="timeline">Timeline</h2>
+        </div>
+      </header>
+        <ol class="timeline" data-reveal>
+          <li class="timeline__item"><time class="mono">2009–2019</time><h3>School</h3><p>Jesus and Mary Academy, Darbhanga, Bihar</p></li>
+          <li class="timeline__item"><time class="mono">2019–2021</time><h3>Senior secondary</h3><p>Shanti Gyan International School, Dwarka, New Delhi</p></li>
+          <li class="timeline__item"><time class="mono">2021–2025</time><h3>B.Tech in GeoInformatics</h3><p>NSUT, Delhi</p></li>
+          <li class="timeline__item"><time class="mono">2023–Present</time><h3>Consulting Head</h3><p>Uday GeoAnalytics Consultancy (formerly Urban Geo Dynamics)</p></li>
+          <li class="timeline__item"><time class="mono">Jul–Dec 2024</time><h3>Research Intern</h3><p>DGRE, DRDO, Chandigarh</p></li>
+          <li class="timeline__item"><time class="mono">Jun 2025–Present</time><h3>GIS Engineer</h3><p>Survey of India, Dehradun</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--rule" aria-labelledby="education">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.4</p>
+        <div class="section-head__body">
+          <h2 id="education">Education</h2>
+        </div>
+      </header>
+        <div class="entries">
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">2021–2025</p><p class="entry__note">Delhi</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">B.Tech in GeoInformatics</h3>
+            <p class="entry__role">Netaji Subhas University of Technology (NSUT), Delhi</p>
+            <p class="entry__note">Main subjects: GIS, remote sensing, GNSS, photogrammetry, digital image processing, cartography, Python and spatial data modelling.</p>
+            <p class="entry__note">Founded the Geospatial Technology Club (200+ members across India).</p>
+          </div>
+        </article>
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">2019–2021</p><p class="entry__note">New Delhi</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">Senior secondary (Class 11–12)</h3>
+            <p class="entry__role">Shanti Gyan International School, Dwarka, New Delhi</p>
+          </div>
+        </article>
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">2009–2019</p><p class="entry__note">Bihar</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">School (Class 1–10)</h3>
+            <p class="entry__role">Jesus and Mary Academy, Darbhanga, Bihar</p>
+          </div>
+        </article>
+        </div>
+        <h3 class="mono subhead" style="margin-top:var(--s-8)">Certifications</h3>
+        <ul class="cert-list">
+          <li><span class="mono">01</span><span>ArcGIS Pro Specialist (Esri Training)</span></li>
+          <li><span class="mono">02</span><span>Spatial Data Analysis with Google Earth Engine (CEPT University)</span></li>
+          <li><span class="mono">03</span><span>Drones and Drone Data Processing (CoELAM, Mysuru)</span></li>
+          <li><span class="mono">04</span><span>RS &amp; GIS Application in Natural Resource Management (IIRS, Dehradun)</span></li>
+          <li><span class="mono">05</span><span>Complete Machine Learning &amp; Data Science (Greeks &amp; Greeks)</span></li>
+          <li><span class="mono">06</span><span>NSS NIC Camp Certificate</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--rule" aria-labelledby="experience">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.5</p>
+        <div class="section-head__body">
+          <h2 id="experience">Experience</h2>
+        </div>
+      </header>
+        <div class="entries">
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">Jun 2025–Present</p><p class="entry__note">Dehradun</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">Geodetic &amp; Research Branch (G&amp;RB)</h3>
+            <p class="entry__role">GIS Engineer, Survey of India</p>
+            <p class="entry__note">I work across two wings:</p>
+            <ul class="bullets">
+              <li><strong>NSRF Wing:</strong> Processing GNSS CORS data from 1023+ reference stations with GAMIT/GLOBK and PRIDE PPP-AR. My Python automation brought processing time down from 7 days to 3 days per station. I also worked with a team of 5 geodetic engineers to standardise data collection across the stations.</li>
+              <li><strong>HPL Wing:</strong> Processing High Precision Levelling data for India's national vertical datum. I automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. A month of work now takes a day.</li>
             </ul>
-            <div class="lang-toggle">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <span class="lang-sep">|</span>
-                <button class="lang-btn" data-lang="hi">हिं</button>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+          </div>
+        </article>
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">2023–Present</p><p class="entry__note">India</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">Uday GeoAnalytics Consultancy</h3>
+            <p class="entry__role">Consulting Head · <span class="entry__former">Formerly Urban Geo Dynamics (UGD)</span></p>
+            <p class="entry__note">A geospatial startup in India. We build GeoAI tools for civic problems:</p>
+            <ul class="bullets">
+              <li><strong>SolarSight:</strong> a free rooftop solar assessment for any home in India. In under 2 minutes it gives panel count, savings, subsidy, payback and installer leads, as a 7-page PDF report (solarsight.in).</li>
+              <li><strong>Baadh Mitra:</strong> a flood early warning system for Indian villages. It is still in development, with completion expected around 2028.</li>
+              <li><strong>UGD LULC Engine:</strong> a land use classification engine, still in development.</li>
+              <li>I lead an 8-member team across product, QA, content and strategy.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">Jul–Dec 2024</p><p class="entry__note">Chandigarh</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">Defence Geoinformatics Research Establishment (DGRE), DRDO</h3>
+            <p class="entry__role">Research Intern</p>
+            <p class="entry__note">Flood risk mapping and geospatial analysis for defence work:</p>
+            <ul class="bullets">
+              <li>Processed about 3 million LiDAR points and 32 hyperspectral bands (.pix, .hdr) in Python, using Spectral Python and laspy</li>
+              <li>Built flood inundation models to check terrain vulnerability under sea level rise scenarios of 1 m and above</li>
+              <li>Combined 5+ layers (terrain, elevation, drainage) for defence planning</li>
+            </ul>
+          </div>
+        </article>
+        <article class="entry" data-reveal>
+          <div class="entry__meta"><p class="mono">2021–2025</p><p class="entry__note">Delhi</p></div>
+          <div class="entry__body">
+            <h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600">Geospatial Technology Club, NSUT</h3>
+            <p class="entry__role">Founder & Lead</p>
+            <p class="entry__note">Grew the club to 200+ members from across India. We ran lectures by industry experts, hands-on workshops, and training sessions on geospatial tools and careers.</p>
+          </div>
+        </article>
         </div>
-    </nav>
-
-    <section class="page-hero">
-        <span class="section-number" data-en="Get to Know Me" data-hi="मेरे बारे में जानें">Get to Know Me</span>
-        <h1 data-en="About Me" data-hi="मेरे बारे में">About Me</h1>
-        <p data-en="Geoinformatics professional passionate about turning spatial data into real-world solutions." data-hi="स्पेशियल डेटा को वास्तविक समाधान में बदलने के लिए उत्साही जियोइन्फॉर्मेटिक्स प्रोफेशनल।">Geoinformatics professional passionate about turning spatial data into real-world solutions.</p>
+      </div>
     </section>
 
-    <section class="page-content">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-photo">
-                    <img src="../assets/about.jpeg" alt="Aditya Kumar Jha">
-                </div>
-                <div class="about-text">
-                    <h3 data-en="Hello, I'm Aditya 👋" data-hi="नमस्ते, मैं आदित्य हूँ 👋">Hello, I'm Aditya 👋</h3>
-                    
-                    <p data-en="I turn complex geospatial challenges into elegant, automated solutions. With 4+ years of research experience and hands-on work at Survey of India's Geodetic & Research Branch and DRDO, I specialize in transforming raw spatial data into decision-grade intelligence." data-hi="मैं जटिल भू-स्थानिक चुनौतियों को सुरुचिपूर्ण, स्वचालित समाधानों में बदलता हूँ। 4+ वर्षों के अनुसंधान अनुभव और सर्वे ऑफ इंडिया तथा DRDO में व्यावहारिक कार्य के साथ, मैं कच्चे स्थानिक डेटा को निर्णय-ग्रेड इंटेलिजेंस में बदलने में विशेषज्ञ हूँ।">I turn complex geospatial challenges into elegant, automated solutions. With 4+ years of research experience and hands-on work at Survey of India's Geodetic & Research Branch and DRDO, I specialize in transforming raw spatial data into decision-grade intelligence.</p>
-
-                    <p data-en="At Survey of India, I manage two critical wings: the NSRF Wing (processing GNSS CORS network data for 1023+ reference stations) and the HPL Wing (maintaining India's national vertical datum). My automation scripts have revolutionized workflows-reducing GNSS processing time from 7 days to 3 days per station and compressing 1 month of levelling analysis into a single day, while eliminating human errors through built-in QA/QC protocols including Tau tests and global statistical validation." data-hi="सर्वे ऑफ इंडिया में, मैं दो महत्वपूर्ण विंग्स का प्रबंधन करता हूँ: NSRF विंग (1023+ संदर्भ स्टेशनों के लिए GNSS CORS नेटवर्क डेटा प्रोसेसिंग) और HPL विंग (भारत के राष्ट्रीय ऊर्ध्वाधर डेटम को बनाए रखना)। मेरी स्वचालन स्क्रिप्ट्स ने कार्यप्रवाह में क्रांति ला दी है—GNSS प्रोसेसिंग समय को प्रति स्टेशन 7 दिनों से घटाकर 3 दिन कर दिया और 1 महीने के लेवलिंग विश्लेषण को एक दिन में संपीड़ित कर दिया।">At Survey of India, I manage two critical wings: the NSRF Wing (processing GNSS CORS network data for 1023+ reference stations) and the HPL Wing (maintaining India's national vertical datum). My automation scripts have revolutionized workflows—reducing GNSS processing time from 7 days to 3 days per station and compressing 1 month of levelling analysis into a single day, while eliminating human errors through built-in QA/QC protocols including Tau tests and global statistical validation.</p>
-
-                    <p data-en="My work at DRDO's Defence Geoinformatics Research Establishment involved processing ~3 million LiDAR points and 32 hyperspectral bands to create flood inundation models and terrain vulnerability assessments-directly supporting strategic defense planning and disaster preparedness." data-hi="DRDO की डिफेंस जियोइनफॉर्मेटिक्स रिसर्च एस्टैब्लिशमेंट में मेरे काम में ~3 मिलियन LiDAR पॉइंट्स और 32 हाइपरस्पेक्ट्रल बैंड्स को प्रोसेस करना शामिल था, जिससे बाढ़ जलमग्नता मॉडल और भू-भाग भेद्यता आकलन बनाए गए।">My work at DRDO's Defence Geoinformatics Research Establishment involved processing ~3 million LiDAR points and 32 hyperspectral bands to create flood inundation models and terrain vulnerability assessments—directly supporting strategic defense planning and disaster preparedness.</p>
-
-                    <p data-en="Beyond technical execution, I'm a builder of communities. I founded the Geospatial Technology Club at NSUT with 200+ members across India, connecting students with industry professionals and democratizing access to cutting-edge GIS knowledge." data-hi="तकनीकी निष्पादन से परे, मैं समुदायों का निर्माता हूँ। मैंने NSUT में भारत भर में 200+ सदस्यों के साथ जियोस्पेशियल टेक्नोलॉजी क्लब की स्थापना की।">Beyond technical execution, I'm a builder of communities. I founded the Geospatial Technology Club at NSUT with 200+ members across India, connecting students with industry professionals and democratizing access to cutting-edge GIS knowledge.</p>
-
-                    <p data-en="<strong>What sets me apart:</strong> I don't just solve problems-I architect sustainable, scalable systems. Clean code, comprehensive documentation, and deep analytical thinking are non-negotiables in my workflow. I thrive on high-stakes research challenges where precision, innovation, and strategic impact converge." data-hi="<strong>मुझे अलग बनाता है:</strong> मैं केवल समस्याओं का समाधान नहीं करता—मैं टिकाऊ, स्केलेबल सिस्टम डिज़ाइन करता हूँ।"><strong>What sets me apart:</strong> I don't just solve problems; I architect sustainable, scalable systems. Clean code, comprehensive documentation, and deep analytical thinking are non-negotiables in my workflow. I thrive on high-stakes research challenges where precision, innovation, and strategic impact converge.</p>
-
-                    <p data-en="I'm actively seeking opportunities in research-intensive roles, consulting positions, and innovative startups—especially those tackling complex geospatial problems at the intersection of technology and real-world impact. If you're building solutions that demand both technical excellence and strategic vision, let's connect." data-hi="मैं सक्रिय रूप से अनुसंधान-गहन भूमिकाओं, परामर्श पदों और नवोन्मेषी स्टार्टअप्स में अवसरों की तलाश कर रहा हूँ—विशेष रूप से वे जो प्रौद्योगिकी और वास्तविक दुनिया के प्रभाव के प्रतिच्छेदन पर जटिल भू-स्थानिक समस्याओं से निपट रहे हैं।">I'm actively seeking opportunities in research-intensive roles, consulting positions, and innovative startups—especially those tackling complex geospatial problems at the intersection of technology and real-world impact. If you're building solutions that demand both technical excellence and strategic vision, let's connect.</p>
-
-                    <div class="about-info">
-                        <div class="info-item">
-                            <label data-en="Name" data-hi="नाम">Name</label>
-                            <span>Aditya Kumar Jha</span>
-                        </div>
-                        <div class="info-item">
-                            <label data-en="Current Location" data-hi="स्थान">Current Location</label>
-                            <span>Dehradun, India</span>
-                        </div>
-                        <div class="info-item">
-                            <label data-en="Email" data-hi="ईमेल">Email</label>
-                            <span>adityajha976@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <label data-en="Specialization" data-hi="विशेषज्ञता">Specialization</label>
-                            <span data-en="Geoinformatics" data-hi="जियोइन्फॉर्मेटिक्स">Geoinformatics</span>
-                        </div>
-                    </div>
-
-                    <!-- Professional Experience -->
-                    <h3 style="margin-top:48px;" data-en="Professional Experience" data-hi="व्यावसायिक अनुभव">Professional Experience</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2023 — Present</div>
-                            <div class="timeline-content">
-                                <h4>Consulting Head</h4>
-                                <p><strong>Urban Geo Dynamics (UGD)</strong> • India</p>
-                                <p style="font-size:0.85rem; color: var(--text-muted); margin-top:8px;">An India-based Geospatial Technology startup focused on tackling real-world challenges by developing scalable, GeoAI-powered civic tech products and services across the geospatial domain:</p>
-                                <ul style="font-size:0.85rem; color: var(--text-muted); margin-top:4px; margin-left:20px;">
-                                    <li><strong>SolarSight:</strong> SolarSight is India’s first free, AI-powered solar intelligence platform that gives any homeowner a complete rooftop solar assessment in under 2 minutes — including panel count, savings, subsidy, payback, and installer leads - with 7 page PDF report in English, with zero cost to users (solarsight.in)..</li>
-                                    <li><strong>Baadh Mitra:</strong> Baadh Mitra is a specialized, Indian village-level Early Warning System designed to enhance flood resilience; it is officially scheduled for a phased nationwide rollout to be completed before the monsoon season in June 2026..</li>
-                                    <li><strong>UGD LULC Engine:</strong> Upcoming Product......</li>
-                                    <li>Leading 8-members team across product development, QA, content, and strategy.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">June 2025 — Present</div>
-                            <div class="timeline-content">
-                                <h4>Geodetic & Research Branch (G&RB)</h4>
-                                <p><strong>Survey of India</strong> • Dehradun, India</p>
-                                <p style="font-size:0.85rem; color: var(--text-muted); margin-top:8px;">Managing two critical wings:</p>
-                                <ul style="font-size:0.85rem; color: var(--text-muted); margin-top:4px; margin-left:20px;">
-                                    <li><strong>NSRF Wing:</strong> Processing GNSS CORS network data for 1023+ reference stations using GAMIT/GLOBK and PRIDE PPP-AR. Developed Python automation reducing processing time from 7 to 3 days per station.</li>
-                                    <li><strong>HPL Wing:</strong> Processing High Precision Levelling data for India's national vertical datum. Automated geopotential number, standard deviation, and Helmert orthometric height computation-reducing 1-month workflows to 1 day with integrated QA/QC (Tau test, global statistical validation).</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">July 2024 — Dec 2024 </div>
-                            <div class="timeline-content">
-                                <h4>Research Intern</h4>
-                                <p><strong>Defence Geoinformatics Research Establishment (DGRE), DRDO</strong> • Chandigarh, India</p>
-                                <p style="font-size:0.85rem; color: var(--text-muted); margin-top:8px;">Conducted flood risk mapping and geospatial analysis for defense applications:</p>
-                                <ul style="font-size:0.85rem; color: var(--text-muted); margin-top:4px; margin-left:20px;">
-                                    <li>Processed ~3 million LiDAR points and 32 hyperspectral bands (.pix, .hdr formats) using Python (Spectral Python, laspy)</li>
-                                    <li>Created flood inundation models analyzing terrain vulnerability for 1M+ sea level rise scenarios</li>
-                                    <li>Integrated 5+ geospatial layers (terrain, elevation, drainage) for strategic defense planning</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2021 — 2025</div>
-                            <div class="timeline-content">
-                                <h4>Founder & Lead</h4>
-                                <p><strong>Geospatial Technology Club, NSUT</strong> • Delhi, India</p>
-                                <p style="font-size:0.85rem; color: var(--text-muted); margin-top:8px;">Built a community of 200+ GIS enthusiasts across India. Organized industry expert lectures, hands-on workshops, and training programs connecting students with cutting-edge geospatial technologies and career pathways.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Education -->
-                    <h3 style="margin-top:48px;" data-en="Education" data-hi="शिक्षा">Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2021 — 2025</div>
-                            <div class="timeline-content">
-                                <h4>B.Tech in GeoInformatics</h4>
-                                <p data-en="Netaji Subhas University of Technology (NSUT), Delhi" data-hi="नेताजी सुभाष प्रौद्योगिकी विश्वविद्यालय (NSUT), दिल्ली">Netaji Subhas University of Technology (NSUT), Delhi</p>
-                                <p style="font-size:0.8rem; color: var(--text-muted); margin-top:6px;" data-en="Core: GIS, Remote Sensing, GNSS, Photogrammetry, Digital Image Processing, Cartography, Python, Spatial Data Modeling" data-hi="मुख्य विषय: GIS, रिमोट सेंसिंग, GNSS, फोटोग्रामेट्री, डिजिटल इमेज प्रोसेसिंग, कार्टोग्राफी, पायथन, स्थानिक डेटा मॉडलिंग">Core: GIS, Remote Sensing, GNSS, Photogrammetry, Digital Image Processing, Cartography, Python, Spatial Data Modeling</p>
-                                <p style="font-size:0.8rem; color: var(--text-muted); margin-top:4px;">Founded Geospatial Technology Club • 200+ members across India</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2019 — 2021</div>
-                            <div class="timeline-content">
-                                <h4>Senior Secondary (11th - 12th)</h4>
-                                <p data-en="Shanti Gyan International School, Dwarka, New Delhi" data-hi="शांति ज्ञान इंटरनेशनल स्कूल, द्वारका, नई दिल्ली">Shanti Gyan International School, Dwarka, New Delhi</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2009 — 2019</div>
-                            <div class="timeline-content">
-                                <h4>Secondary Education (1st - 10th)</h4>
-                                <p data-en="Jesus and Mary Academy, Darbhanga, Bihar" data-hi="जीसस एंड मैरी एकेडमी, दरभंगा, बिहार">Jesus and Mary Academy, Darbhanga, Bihar</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certifications -->
-                    <h3 style="margin-top:48px;" data-en="Certifications" data-hi="प्रमाणपत्र">Certifications</h3>
-                    <div class="cert-grid">
-                        <div class="cert-item">
-                            <div class="cert-icon">🏆</div>
-                            <span>ArcGIS Pro Specialist (Esri Training)</span>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">🛰️</div>
-                            <span data-en="Spatial Data Analysis with Google Earth Engine (CEPT University)" data-hi="Google Earth Engine के साथ स्पेशियल डेटा एनालिसिस (CEPT University)">Spatial Data Analysis with Google Earth Engine (CEPT University)</span>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">🚁</div>
-                            <span data-en="Drones and Drone Data Processing (COELAM, MYSURU)" data-hi="ड्रोन और ड्रोन डेटा प्रोसेसिंग (COELAM, MYSURU)">Drones and Drone Data Processing (CoELAM, MYSURU)</span>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">🌍</div>
-                            <span data-en="RS & GIS Application in Natural Resource Management (IIRS, Dehradun)" data-hi="प्राकृतिक संसाधन प्रबंधन में RS और GIS अनुप्रयोग (IIRS, देहरादून)">RS & GIS Application in Natural Resource Management (IIRS, Dehradun)</span>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">🤖</div>
-                            <span data-en="Complete Machine Learning & Data Science (Greeks & Greeks)" data-hi="संपूर्ण मशीन लर्निंग और डेटा साइंस (Greeks & Greeks)">Complete Machine Learning & Data Science (Greeks & Greeks)</span>
-                        </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">🎖️</div>
-                            <span data-en="NSS NIC Camp Certificate" data-hi="NSS NIC शिविर प्रमाणपत्र">NSS NIC Camp Certificate</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section section--rule" aria-labelledby="interests">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.6</p>
+        <div class="section-head__body">
+          <h2 id="interests">Interests</h2>
         </div>
+      </header>
+        <ul class="tag-list stack-tags" data-reveal>
+          <li class="tag">GNSS-based high-precision positioning</li>
+          <li class="tag">Flood risk assessment and climate resilience</li>
+          <li class="tag">LiDAR and hyperspectral remote sensing</li>
+          <li class="tag">Geospatial automation with Python</li>
+          <li class="tag">Community building</li>
+        </ul>
+      </div>
     </section>
+  </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="nav-logo"><span class="logo-mark">A</span>ditya<span class="logo-dot">.</span></span>
-                    <p>Geoinformatics Professional</p>
-                </div>
-                <div class="footer-links">
-                    <a href="../index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="research.html">Research</a>
-                    <a href="skills.html">Skills</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    <a href="/cdn-cgi/l/email-protection#1b7a7f726f627a71737a222c2d5b7c767a727735787476" aria-label="Email">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom"><p>© 2026 Aditya Kumar Jha. All rights reserved.</p></div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top grid">
+        <div class="site-footer__brand g-lg-5 g-md-8">
+          <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+          <p>GIS Engineer · Python Developer · Location Technology Enthusiast</p>
+          <p class="mono">Maps. People. Possibilities.</p>
         </div>
-    </footer>
-    <script src="../js/main.js"></script>
+        <nav class="g-lg-4 g-md-4" aria-label="Footer">
+          <p class="mono site-footer__title">Pages</p>
+          <ul class="site-footer__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/research.html">Research</a></li>
+            <li><a href="../pages/skills.html">Skills</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="g-lg-3 g-md-4">
+          <p class="mono site-footer__title">Connect</p>
+          <ul class="social-list">
+            <li><a href="https://github.com/adityagis" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.95c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+            <li><a href="mailto:adityajha976@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aditya Kumar Jha. All rights reserved. <a class="footer-credit" href="../pages/projects.html#photo-credits">Photo credits</a></p>
+        <p class="visitors" id="visitors" hidden>Total visitors: <span data-visitors-count></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/projects.js" defer></script>
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script data-goatcounter="https://adityagis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

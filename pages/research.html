@@ -1,127 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research & Consultancy | Aditya Kumar Jha</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research &amp; Consultancy | Aditya Kumar Jha</title>
+  <meta name="description" content="Research interests and consulting work: GIS analysis, remote sensing, GNSS and geodesy, spatial data infrastructure and custom research.">
+  <meta name="author" content="Aditya Kumar Jha">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F5F5F2">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="canonical" href="https://adityagis.github.io/Portfolio/pages/research.html">
+  <meta property="og:title" content="Research &amp; Consultancy | Aditya Kumar Jha">
+  <meta property="og:description" content="Research interests and consulting work: GIS analysis, remote sensing, GNSS and geodesy, spatial data infrastructure and custom research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adityagis.github.io/Portfolio/pages/research.html">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://adityagis.github.io/Portfolio/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aditya Kumar Jha, geoinformatics engineer. GIS, GNSS, Python and LiDAR.">
+  <meta property="og:site_name" content="Aditya Kumar Jha">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research &amp; Consultancy | Aditya Kumar Jha">
+  <meta name="twitter:description" content="Research interests and consulting work: GIS analysis, remote sensing, GNSS and geodesy, spatial data infrastructure and custom research.">
+  <meta name="twitter:image" content="https://adityagis.github.io/Portfolio/assets/images/og-image.jpg">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try { if (localStorage.getItem('portfolio-color-mode') === 'color') d.setAttribute('data-mode', 'color'); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
-    <nav class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo"><span class="logo-mark">A</span>ditya<span class="logo-dot">.</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="research.html" class="active">Research & Consultancy</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="lang-toggle">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <span class="lang-sep">|</span>
-                <button class="lang-btn" data-lang="hi">हिं</button>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="../index.html"><span class="nav-num">01</span>Home</a></li>
+          <li><a class="nav-link" href="../pages/about.html"><span class="nav-num">02</span>About</a></li>
+          <li><a class="nav-link" href="../pages/projects.html"><span class="nav-num">03</span>Projects</a></li>
+          <li><a class="nav-link" href="../pages/research.html" aria-current="page"><span class="nav-num">04</span>Research</a></li>
+          <li><a class="nav-link" href="../pages/skills.html"><span class="nav-num">05</span>Skills</a></li>
+          <li><a class="nav-link" href="../pages/contact.html"><span class="nav-num">06</span>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <button type="button" class="icon-btn js-search-open" aria-label="Search" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+        <button type="button" class="icon-btn js-menu-open" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="mode-switch">
+        <span class="mode-switch__label" data-side="mono">Mono</span>
+        <button type="button" class="mode-switch__btn" role="switch" aria-checked="false" aria-label="Color mode">
+          <span class="mode-switch__track"><span class="mode-switch__thumb"></span></span>
+        </button>
+        <span class="mode-switch__label" data-side="color">Color</span>
+      </div>
+      </div>
+      <form class="search-panel" id="search-panel" role="search" hidden>
+        <label class="visually-hidden" for="site-search">Search this site</label>
+        <input class="search-panel__field" id="site-search" type="search" placeholder="Search pages and projects" autocomplete="off">
+        <div class="search-panel__results" aria-live="polite"></div>
+      </form>
+    </div>
+  </header>
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <div class="drawer__backdrop"></div>
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+        <button type="button" class="icon-btn js-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer__body">
+        <nav class="drawer__nav" aria-label="Menu">
+          <ol>
+            <li><a href="../index.html"><span class="nav-num">01</span>Home</a></li>
+            <li><a href="../pages/about.html"><span class="nav-num">02</span>About</a></li>
+            <li><a href="../pages/projects.html"><span class="nav-num">03</span>Projects</a></li>
+            <li><a href="../pages/research.html" aria-current="page"><span class="nav-num">04</span>Research</a></li>
+            <li><a href="../pages/skills.html"><span class="nav-num">05</span>Skills</a></li>
+            <li><a href="../pages/contact.html"><span class="nav-num">06</span>Contact</a></li>
+          </ol>
+        </nav>
+        <ul class="drawer__links">
+          <li><a href="https://github.com/adityagis" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="mailto:adityajha976@gmail.com">Email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="../assets/Aditya_Jha_Resume.pdf" target="_blank" rel="noopener">Resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+        </ul>
+        <div class="drawer__foot">
+          <div class="drawer__foot-row">
+            <span class="mono mono--secondary">Display</span>
+            <div class="mode-switch">
+        <span class="mode-switch__label" data-side="mono">Mono</span>
+        <button type="button" class="mode-switch__btn" role="switch" aria-checked="false" aria-label="Color mode">
+          <span class="mode-switch__track"><span class="mode-switch__thumb"></span></span>
+        </button>
+        <span class="mode-switch__label" data-side="color">Color</span>
+      </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </div>
 
-    <section class="page-hero">
-        <span class="section-number" data-en="Research & Services" data-hi="अनुसंधान और सेवाएँ">Research & Services</span>
-        <h1 data-en="Research & Consultancy" data-hi="अनुसंधान और परामर्श">Research & Consultancy</h1>
-        <p data-en="Exploring geospatial frontiers and offering professional consulting services." data-hi="जियोस्पेशियल सीमाओं की खोज और पेशेवर परामर्श सेवाएँ प्रदान करना।">Exploring geospatial frontiers and offering professional consulting services.</p>
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <div class="page-head__meta">
+          <p class="mono">04</p>
+          <p class="mono mono--secondary">Research &amp; Services</p>
+        </div>
+        <h1 class="page-head__title">Research &amp; Consultancy</h1>
+        <p class="page-head__lead">What I research, and the work I take on as a consultant.</p>
+      </div>
     </section>
 
-    <section class="page-content">
-        <div class="container">
-            <div class="research-grid">
-
-                <!-- Research Areas -->
-                <div class="research-section">
-                    <h3 data-en="🔬 Research Interests" data-hi="🔬 अनुसंधान रुचियाँ">🔬 Research Interests</h3>
-
-                    <div class="research-item">
-                        <h4 data-en="GNSS-based High-Precision Positioning" data-hi="GNSS-आधारित उच्च-सटीक पोजिशनिंग">GNSS-based High-Precision Positioning</h4>
-                        <p data-en="Research on CORS network optimization, PPP-AR processing techniques, and achieving centimeter-level accuracy for national geodetic infrastructure." data-hi="CORS नेटवर्क ऑप्टिमाइजेशन, PPP-AR प्रोसेसिंग तकनीकों और राष्ट्रीय जियोडेटिक इन्फ्रास्ट्रक्चर के लिए सेंटीमीटर-स्तरीय सटीकता प्राप्त करने पर अनुसंधान।">Research on CORS network optimization, PPP-AR processing techniques, and achieving centimeter-level accuracy for national geodetic infrastructure.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="Flood Risk Assessment & Climate Resilience" data-hi="बाढ़ जोखिम मूल्यांकन और जलवायु लचीलापन">Flood Risk Assessment & Climate Resilience</h4>
-                        <p data-en="Spatial analysis of flood-prone areas using multi-layer GIS data, sea level rise modeling, and terrain-based vulnerability assessment for disaster risk reduction." data-hi="बाढ़-प्रवण क्षेत्रों का बहु-स्तरीय GIS डेटा, समुद्र स्तर वृद्धि मॉडलिंग, और भूभाग-आधारित भेद्यता मूल्यांकन का उपयोग करके स्पेशियल एनालिसिस।">Spatial analysis of flood-prone areas using multi-layer GIS data, sea level rise modeling, and terrain-based vulnerability assessment for disaster risk reduction.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="LiDAR & Hyperspectral Remote Sensing" data-hi="LiDAR और हाइपरस्पेक्ट्रल रिमोट सेंसिंग">LiDAR & Hyperspectral Remote Sensing</h4>
-                        <p data-en="Analysis of high-density point cloud data and hyperspectral imagery for terrain characterization, vegetation analysis, and environmental monitoring." data-hi="भूभाग लक्षण वर्णन, वनस्पति विश्लेषण, और पर्यावरण निगरानी के लिए उच्च-घनत्व पॉइंट क्लाउड डेटा और हाइपरस्पेक्ट्रल इमेजरी का विश्लेषण।">Analysis of high-density point cloud data and hyperspectral imagery for terrain characterization, vegetation analysis, and environmental monitoring.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="Geospatial Automation with Python" data-hi="पायथन के साथ जियोस्पेशियल ऑटोमेशन">Geospatial Automation with Python</h4>
-                        <p data-en="Developing scalable Python-based automation tools for GNSS data processing, spatial ETL workflows, and geospatial data management pipelines." data-hi="GNSS डेटा प्रोसेसिंग, स्पेशियल ETL वर्कफ़्लो, और जियोस्पेशियल डेटा मैनेजमेंट पाइपलाइन के लिए स्केलेबल पायथन-आधारित ऑटोमेशन टूल विकसित करना।">Developing scalable Python-based automation tools for GNSS data processing, spatial ETL workflows, and geospatial data management pipelines.</p>
-                    </div>
-                </div>
-
-                <!-- Consultancy Services -->
-                <div class="research-section">
-                    <h3 data-en="💼 Consultancy Services" data-hi="💼 परामर्श सेवाएँ">💼 Consultancy Services</h3>
-
-                    <div class="research-item">
-                        <h4 data-en="GIS Mapping & Spatial Analysis" data-hi="GIS मैपिंग और स्पेशियल एनालिसिस">GIS Mapping & Spatial Analysis</h4>
-                        <p data-en="Custom GIS mapping solutions for urban planning, land use analysis, infrastructure development, and site selection using ArcGIS and QGIS." data-hi="ArcGIS और QGIS का उपयोग करके शहरी नियोजन, भूमि उपयोग विश्लेषण, और इन्फ्रास्ट्रक्चर विकास के लिए कस्टम GIS मैपिंग समाधान।">Custom GIS mapping solutions for urban planning, land use analysis, infrastructure development, and site selection using ArcGIS and QGIS.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="GNSS Survey & Data Processing" data-hi="GNSS सर्वे और डेटा प्रोसेसिंग">GNSS Survey & Data Processing</h4>
-                        <p data-en="High-precision GNSS data processing, CORS station setup consultation, quality control, and geodetic network adjustment services." data-hi="उच्च-सटीक GNSS डेटा प्रोसेसिंग, CORS स्टेशन सेटअप परामर्श, क्वालिटी कंट्रोल, और जियोडेटिक नेटवर्क एडजस्टमेंट सेवाएँ।">High-precision GNSS data processing, CORS station setup consultation, quality control, and geodetic network adjustment services.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="Remote Sensing & Drone Mapping" data-hi="रिमोट सेंसिंग और ड्रोन मैपिंग">Remote Sensing & Drone Mapping</h4>
-                        <p data-en="Satellite imagery analysis, UAV/drone data processing, LiDAR analysis, and photogrammetric mapping for environmental monitoring and infrastructure assessment." data-hi="सैटेलाइट इमेजरी विश्लेषण, UAV/ड्रोन डेटा प्रोसेसिंग, LiDAR विश्लेषण, और फोटोग्रामेट्रिक मैपिंग।">Satellite imagery analysis, UAV/drone data processing, LiDAR analysis, and photogrammetric mapping for environmental monitoring and infrastructure assessment.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="Python Automation & Geospatial Training" data-hi="पायथन ऑटोमेशन और जियोस्पेशियल ट्रेनिंग">Python Automation & Geospatial Training</h4>
-                        <p data-en="Custom Python scripts for geospatial workflows, data pipeline development, and training sessions on GIS tools, remote sensing, and spatial programming." data-hi="जियोस्पेशियल वर्कफ़्लो के लिए कस्टम पायथन स्क्रिप्ट, डेटा पाइपलाइन विकास, और GIS टूल्स, रिमोट सेंसिंग पर ट्रेनिंग सत्र।">Custom Python scripts for geospatial workflows, data pipeline development, and training sessions on GIS tools, remote sensing, and spatial programming.</p>
-                    </div>
-
-                    <div class="research-item">
-                        <h4 data-en="Spatial Database Management" data-hi="स्पेशियल डेटाबेस मैनेजमेंट">Spatial Database Management</h4>
-                        <p data-en="PostgreSQL/PostGIS database setup, spatial data warehousing, GeoServer deployment, and geospatial data infrastructure consulting." data-hi="PostgreSQL/PostGIS डेटाबेस सेटअप, स्पेशियल डेटा वेयरहाउसिंग, GeoServer डिप्लॉयमेंट, और जियोस्पेशियल डेटा इन्फ्रास्ट्रक्चर परामर्श।">PostgreSQL/PostGIS database setup, spatial data warehousing, GeoServer deployment, and geospatial data infrastructure consulting.</p>
-                    </div>
-                </div>
-
-            </div>
+    <div data-filter-scope data-noun="topics" data-toggle-off>
+    <section class="section section--flush-top" aria-labelledby="categories">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">04.1</p>
+        <div class="section-head__body">
+          <h2 id="categories">Research areas</h2>
+          <p class="section-head__lead">Select a category to filter the list below. Select it again to show everything.</p>
         </div>
+      </header>
+        <div class="categories" role="group" aria-label="Research categories" data-reveal>
+          <button type="button" class="category" data-filter="analysis" aria-pressed="false">
+            <span class="category__num mono">01</span>
+            <span class="category__name">Geospatial Analysis</span>
+            <span class="category__text">Multi-layer GIS analysis for flood risk, land use, urban planning and site selection.</span>
+          </button>
+          <button type="button" class="category" data-filter="rs" aria-pressed="false">
+            <span class="category__num mono">02</span>
+            <span class="category__name">Remote Sensing</span>
+            <span class="category__text">LiDAR, hyperspectral and satellite imagery, plus UAV/drone mapping.</span>
+          </button>
+          <button type="button" class="category" data-filter="gnss" aria-pressed="false">
+            <span class="category__num mono">03</span>
+            <span class="category__name">GNSS &amp; Geodesy</span>
+            <span class="category__text">High-precision positioning, CORS networks and PPP-AR processing to centimeter-level accuracy.</span>
+          </button>
+          <button type="button" class="category" data-filter="sdi" aria-pressed="false">
+            <span class="category__num mono">04</span>
+            <span class="category__name">Spatial Data Infrastructure</span>
+            <span class="category__text">PostgreSQL/PostGIS databases, spatial data warehousing and GeoServer deployment.</span>
+          </button>
+          <button type="button" class="category" data-filter="custom" aria-pressed="false">
+            <span class="category__num mono">05</span>
+            <span class="category__name">Custom Research Solutions</span>
+            <span class="category__text">Python-based automation, spatial ETL workflows and geospatial training.</span>
+          </button>
+        </div>
+      </div>
     </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 data-en="Need Geospatial Consulting?" data-hi="जियोस्पेशियल परामर्श चाहिए?">Need Geospatial Consulting?</h2>
-                <p data-en="Whether it's a GIS project, GNSS data processing, or spatial analysis — I can help. Let's discuss your requirements." data-hi="चाहे GIS प्रोजेक्ट हो, GNSS डेटा प्रोसेसिंग हो, या स्पेशियल एनालिसिस — मैं मदद कर सकता हूँ।">Whether it's a GIS project, GNSS data processing, or spatial analysis — I can help. Let's discuss your requirements.</p>
-                <a href="contact.html" class="btn btn-primary"><span data-en="Contact Me" data-hi="मुझसे संपर्क करें">Contact Me</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-            </div>
+    <section class="section section--flush-top" aria-labelledby="topics">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">04.2</p>
+        <div class="section-head__body">
+          <h2 id="topics">Research and services</h2>
         </div>
+      </header>
+        <p class="filter-status" data-filter-status role="status" aria-live="polite" style="margin:calc(var(--s-4) * -1) 0 var(--s-5)"></p>
+        <ul class="topics">
+          <li class="topic" data-cats="gnss">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-0">
+              <span class="topic__type mono">Research</span>
+              <span class="topic__title">GNSS-based high-precision positioning</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-0"><div><p>How to optimise CORS networks and PPP-AR processing so national geodetic infrastructure gets centimeter-level accuracy.</p></div></div>
+          </li>
+          <li class="topic" data-cats="analysis">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-1">
+              <span class="topic__type mono">Research</span>
+              <span class="topic__title">Flood risk assessment and climate resilience</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-1"><div><p>Finding flood-prone areas with layered GIS data, sea level rise models and terrain-based vulnerability checks, to reduce disaster risk.</p></div></div>
+          </li>
+          <li class="topic" data-cats="rs">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-2">
+              <span class="topic__type mono">Research</span>
+              <span class="topic__title">LiDAR and hyperspectral remote sensing</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-2"><div><p>Using dense point clouds and hyperspectral images to study terrain and vegetation, and to monitor the environment.</p></div></div>
+          </li>
+          <li class="topic" data-cats="custom">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-3">
+              <span class="topic__type mono">Research</span>
+              <span class="topic__title">Geospatial automation with Python</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-3"><div><p>Python tools that automate GNSS processing, spatial ETL and the management of geospatial data.</p></div></div>
+          </li>
+          <li class="topic" data-cats="analysis">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-4">
+              <span class="topic__type mono">Consultancy</span>
+              <span class="topic__title">GIS mapping and spatial analysis</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-4"><div><p>Maps and analysis in ArcGIS and QGIS for urban planning, land use, infrastructure projects and site selection.</p></div></div>
+          </li>
+          <li class="topic" data-cats="gnss">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-5">
+              <span class="topic__type mono">Consultancy</span>
+              <span class="topic__title">GNSS survey and data processing</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-5"><div><p>High-precision GNSS processing, advice on setting up CORS stations, quality control and geodetic network adjustment.</p></div></div>
+          </li>
+          <li class="topic" data-cats="rs">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-6">
+              <span class="topic__type mono">Consultancy</span>
+              <span class="topic__title">Remote sensing and drone mapping</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-6"><div><p>Satellite image analysis, drone data processing, LiDAR and photogrammetric mapping, for environmental monitoring and infrastructure checks.</p></div></div>
+          </li>
+          <li class="topic" data-cats="custom">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-7">
+              <span class="topic__type mono">Consultancy</span>
+              <span class="topic__title">Python automation and geospatial training</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-7"><div><p>Python scripts and data pipelines for your geospatial workflow, plus training on GIS tools, remote sensing and spatial programming.</p></div></div>
+          </li>
+          <li class="topic" data-cats="sdi">
+            <h3><button type="button" class="topic__toggle" aria-expanded="false" aria-controls="topic-8">
+              <span class="topic__type mono">Consultancy</span>
+              <span class="topic__title">Spatial database management</span>
+              <svg class="topic__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+            </button></h3>
+            <div class="topic__panel" id="topic-8"><div><p>Setting up PostgreSQL/PostGIS databases, spatial data warehouses and GeoServer, and advising on geospatial data infrastructure.</p></div></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    </div>
+
+    <section class="section section--surface" aria-labelledby="map">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">04.3</p>
+        <div class="section-head__body">
+          <h2 id="map">Map</h2>
+          <p class="section-head__lead">Where I've worked.</p>
+        </div>
+      </header>
+        <div class="grid" style="align-items:start">
+          <div class="g-lg-5 g-md-8">
+        <figure class="map-figure">
+          <div class="map">
+            <img class="map__terrain" src="../assets/maps/region-s2.webp" srcset="../assets/maps/region-s2-700.webp 700w, ../assets/maps/region-s2.webp 1400w" sizes="(max-width: 767px) calc(100vw - 32px), 520px" alt="Satellite image of the Delhi, Chandigarh and Dehradun region" width="1400" height="1400" decoding="async">
+            <svg class="map__lines" viewBox="0 0 800 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path class="grat" d="M286 0V800M571 0V800M0 288H800M0 608H800"/>
+              <path class="route-casing" d="M346 733L223 54L580 186"/>
+              <path class="route" d="M346 733L223 54L580 186"/>
+            </svg>
+            <span class="map__pin map__pin--delhi"></span>
+            <span class="map__pin map__pin--chandigarh"></span>
+            <span class="map__pin map__pin--dehradun"></span>
+            <span class="map__label map__label--delhi">Delhi<small>NSUT · 2021–25</small></span>
+            <span class="map__label map__label--chandigarh">Chandigarh<small>DRDO · 2024</small></span>
+            <span class="map__label map__label--dehradun">Dehradun<small>Survey of India · 2025–</small></span>
+            <span class="map__tick map__tick--x77">77°E</span>
+            <span class="map__tick map__tick--x78">78°E</span>
+            <span class="map__tick map__tick--y30">30°N</span>
+            <span class="map__tick map__tick--y29">29°N</span>
+          </div>
+          <figcaption>Fig. 01: Delhi 28.61°N 77.21°E · Chandigarh 30.73°N 76.78°E · Dehradun 30.32°N 78.03°E. Satellite imagery: <a href="https://s2maps.eu" target="_blank" rel="noopener">Sentinel-2 cloudless</a> by EOX IT Services GmbH, contains modified Copernicus Sentinel data 2016, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption>
+        </figure>
+          </div>
+          <ol class="locations g-lg-6 g-md-8" style="grid-column-end:-1">
+            <li><p class="mono">Delhi · 2021–2025</p><h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4)">NSUT Delhi</h3><p>B.Tech in GeoInformatics; founded the Geospatial Technology Club with 200+ members.</p></li>
+            <li><p class="mono">Chandigarh · Jul–Dec 2024</p><h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4)">DGRE, DRDO</h3><p>Flood risk mapping and LiDAR and hyperspectral analysis for defence applications.</p></li>
+            <li><p class="mono">Dehradun · Jun 2025–Present</p><h3 style="font-size:var(--fs-h4);line-height:var(--lh-h4)">Survey of India, G&amp;RB</h3><p>GNSS CORS network processing and High Precision Levelling for the national vertical datum.</p></li>
+          </ol>
+        </div>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"><span class="nav-logo"><span class="logo-mark">A</span>ditya<span class="logo-dot">.</span></span><p>Geoinformatics Professional</p></div>
-                <div class="footer-links"><a href="../index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a></div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                    <a href="mailto:adityajha976@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg></a>
-                </div>
-            </div>
-            <div class="footer-bottom"><p>© 2026 Aditya Kumar Jha. All rights reserved.</p></div>
+    <section class="section" aria-labelledby="work">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">04.4</p>
+        <div class="section-head__body">
+          <h2 id="work">Publications and work</h2>
         </div>
-    </footer>
-    <script src="../js/main.js"></script>
+      </header>
+        <div class="work-list">
+          <a href="project/gnss-cors.html"><span class="mono">Survey of India, NSRF Wing (G&amp;RB)</span><h3>GNSS CORS network data processing</h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="project/hpl.html"><span class="mono">Survey of India, HPL Wing (G&amp;RB)</span><h3>High Precision Levelling (HPL) network processing</h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="project/flood-risk.html"><span class="mono">DRDO</span><h3>Flood risk mapping and spatial analysis</h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="project/lidar.html"><span class="mono">DRDO</span><h3>LiDAR and hyperspectral data analysis</h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <p class="todo" style="margin-top:var(--s-5)">TODO: add publications (title, venue, year, link).</p>
+      </div>
+    </section>
+
+    <section class="section section--flush-top" aria-labelledby="consultancy-cta">
+      <div class="container">
+        <div class="cta-panel">
+          <p class="mono mono--secondary">04.5</p>
+          <h2 id="consultancy-cta">Need help with a geospatial project?</h2>
+          <p>Tell me what you're working on, whether it's a GIS project, GNSS processing or spatial analysis, and I'll say straight away whether I can help.</p>
+          <a class="btn btn--primary" href="contact.html"><span>Get in touch</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top grid">
+        <div class="site-footer__brand g-lg-5 g-md-8">
+          <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+          <p>GIS Engineer · Python Developer · Location Technology Enthusiast</p>
+          <p class="mono">Maps. People. Possibilities.</p>
+        </div>
+        <nav class="g-lg-4 g-md-4" aria-label="Footer">
+          <p class="mono site-footer__title">Pages</p>
+          <ul class="site-footer__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/research.html">Research</a></li>
+            <li><a href="../pages/skills.html">Skills</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="g-lg-3 g-md-4">
+          <p class="mono site-footer__title">Connect</p>
+          <ul class="social-list">
+            <li><a href="https://github.com/adityagis" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.95c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+            <li><a href="mailto:adityajha976@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aditya Kumar Jha. All rights reserved. <a class="footer-credit" href="../pages/projects.html#photo-credits">Photo credits</a></p>
+        <p class="visitors" id="visitors" hidden>Total visitors: <span data-visitors-count></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/projects.js" defer></script>
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script data-goatcounter="https://adityagis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

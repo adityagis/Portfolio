@@ -2,32 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://adityagis.github.io/Portfolio/</loc>
-        <lastmod>2026-02-11</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://adityagis.github.io/Portfolio/pages/about.html</loc>
-        <lastmod>2026-02-11</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://adityagis.github.io/Portfolio/pages/projects.html</loc>
-        <lastmod>2026-02-11</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://adityagis.github.io/Portfolio/pages/research.html</loc>
-        <lastmod>2026-02-11</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://adityagis.github.io/Portfolio/pages/skills.html</loc>
-        <lastmod>2026-02-11</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://adityagis.github.io/Portfolio/pages/contact.html</loc>
-        <lastmod>2026-02-11</lastmod>
+        <lastmod>2026-09-27</lastmod>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/solarsight.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/baadh-mitra.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/ugd-lulc.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/kuaan-mitra.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/jameen-mitra.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/gnss-cors.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/hpl.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/flood-risk.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://adityagis.github.io/Portfolio/pages/project/lidar.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.6</priority>
     </url>
 </urlset>

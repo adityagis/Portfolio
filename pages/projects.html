@@ -1,207 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Aditya Kumar Jha</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Aditya Kumar Jha</title>
+  <meta name="description" content="Projects by Aditya Kumar Jha: SolarSight, Baadh Mitra, the UGD LULC Engine, GNSS CORS processing at Survey of India, and flood risk and LiDAR work at DRDO.">
+  <meta name="author" content="Aditya Kumar Jha">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F5F5F2">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="canonical" href="https://adityagis.github.io/Portfolio/pages/projects.html">
+  <meta property="og:title" content="Projects | Aditya Kumar Jha">
+  <meta property="og:description" content="Projects by Aditya Kumar Jha: SolarSight, Baadh Mitra, the UGD LULC Engine, GNSS CORS processing at Survey of India, and flood risk and LiDAR work at DRDO.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adityagis.github.io/Portfolio/pages/projects.html">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://adityagis.github.io/Portfolio/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aditya Kumar Jha, geoinformatics engineer. GIS, GNSS, Python and LiDAR.">
+  <meta property="og:site_name" content="Aditya Kumar Jha">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects | Aditya Kumar Jha">
+  <meta name="twitter:description" content="Projects by Aditya Kumar Jha: SolarSight, Baadh Mitra, the UGD LULC Engine, GNSS CORS processing at Survey of India, and flood risk and LiDAR work at DRDO.">
+  <meta name="twitter:image" content="https://adityagis.github.io/Portfolio/assets/images/og-image.jpg">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try { if (localStorage.getItem('portfolio-color-mode') === 'color') d.setAttribute('data-mode', 'color'); } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
-    <nav class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo"><span class="logo-mark">A</span>ditya<span class="logo-dot">.</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="research.html">Research & Consultancy</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="lang-toggle">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <span class="lang-sep">|</span>
-                <button class="lang-btn" data-lang="hi">हिं</button>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="../index.html"><span class="nav-num">01</span>Home</a></li>
+          <li><a class="nav-link" href="../pages/about.html"><span class="nav-num">02</span>About</a></li>
+          <li><a class="nav-link" href="../pages/projects.html" aria-current="page"><span class="nav-num">03</span>Projects</a></li>
+          <li><a class="nav-link" href="../pages/research.html"><span class="nav-num">04</span>Research</a></li>
+          <li><a class="nav-link" href="../pages/skills.html"><span class="nav-num">05</span>Skills</a></li>
+          <li><a class="nav-link" href="../pages/contact.html"><span class="nav-num">06</span>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <button type="button" class="icon-btn js-search-open" aria-label="Search" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+        <button type="button" class="icon-btn js-menu-open" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="mode-switch">
+        <span class="mode-switch__label" data-side="mono">Mono</span>
+        <button type="button" class="mode-switch__btn" role="switch" aria-checked="false" aria-label="Color mode">
+          <span class="mode-switch__track"><span class="mode-switch__thumb"></span></span>
+        </button>
+        <span class="mode-switch__label" data-side="color">Color</span>
+      </div>
+      </div>
+      <form class="search-panel" id="search-panel" role="search" hidden>
+        <label class="visually-hidden" for="site-search">Search this site</label>
+        <input class="search-panel__field" id="site-search" type="search" placeholder="Search pages and projects" autocomplete="off">
+        <div class="search-panel__results" aria-live="polite"></div>
+      </form>
+    </div>
+  </header>
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <div class="drawer__backdrop"></div>
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+        <button type="button" class="icon-btn js-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer__body">
+        <nav class="drawer__nav" aria-label="Menu">
+          <ol>
+            <li><a href="../index.html"><span class="nav-num">01</span>Home</a></li>
+            <li><a href="../pages/about.html"><span class="nav-num">02</span>About</a></li>
+            <li><a href="../pages/projects.html" aria-current="page"><span class="nav-num">03</span>Projects</a></li>
+            <li><a href="../pages/research.html"><span class="nav-num">04</span>Research</a></li>
+            <li><a href="../pages/skills.html"><span class="nav-num">05</span>Skills</a></li>
+            <li><a href="../pages/contact.html"><span class="nav-num">06</span>Contact</a></li>
+          </ol>
+        </nav>
+        <ul class="drawer__links">
+          <li><a href="https://github.com/adityagis" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="mailto:adityajha976@gmail.com">Email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="../assets/Aditya_Jha_Resume.pdf" target="_blank" rel="noopener">Resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+        </ul>
+        <div class="drawer__foot">
+          <div class="drawer__foot-row">
+            <span class="mono mono--secondary">Display</span>
+            <div class="mode-switch">
+        <span class="mode-switch__label" data-side="mono">Mono</span>
+        <button type="button" class="mode-switch__btn" role="switch" aria-checked="false" aria-label="Color mode">
+          <span class="mode-switch__track"><span class="mode-switch__thumb"></span></span>
+        </button>
+        <span class="mode-switch__label" data-side="color">Color</span>
+      </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </div>
 
-    <section class="page-hero">
-        <span class="section-number" data-en="Portfolio" data-hi="पोर्टफोलियो">Portfolio</span>
-        <h1 data-en="My Projects" data-hi="मेरे प्रोजेक्ट्स">My Projects</h1>
-        <p data-en="GeoAI products at Urban Geo Dynamics + geospatial work at Survey of India & DRDO." data-hi="Urban Geo Dynamics पर GeoAI प्रोडक्ट्स + Survey of India और DRDO में जियोस्पेशियल कार्य।">GeoAI products at Urban Geo Dynamics + geospatial work at Survey of India &amp; DRDO.</p>
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <div class="page-head__meta">
+          <p class="mono">03</p>
+          <p class="mono mono--secondary">Projects</p>
+        </div>
+        <h1 class="page-head__title">Projects</h1>
+        <p class="page-head__lead">Products I'm building at Uday GeoAnalytics Consultancy (formerly Urban Geo Dynamics), and my work at Survey of India and DRDO.</p>
+      </div>
     </section>
 
-    <section class="page-content">
-        <div class="container">
-            <!-- ═══ SECTION: URBAN GEO DYNAMICS ═══ -->
-            <div class="section-label-block" style="margin-bottom:28px; margin-top:8px;">
-                <div style="display:flex; align-items:center; gap:14px;">
-                    <div style="height:2px; flex:1; background:var(--border);"></div>
-                    <span style="font-family:'Fira Code',monospace; font-size:0.78rem; color:var(--accent); letter-spacing:0.12em; white-space:nowrap; text-transform:uppercase;">Urban Geo Dynamics — Consulting Head</span>
-                    <div style="height:2px; flex:1; background:var(--border);"></div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-
-                <!-- SolarSight -->
-                <div class="project-card" style="border-left: 3px solid var(--accent);">
-                    <div class="project-header">
-                        <div class="project-org" style="display:flex;justify-content:space-between;align-items:center;">
-                            <span>Urban Geo Dynamics — Flagship Product</span>
-                            <span style="font-size:0.72rem; background:rgba(var(--accent-rgb),0.12); color:var(--accent); padding:2px 10px; border-radius:20px; font-family:'Fira Code',monospace;">🟢 Deploying</span>
-                        </div>
-                        <h3 data-en="SolarSight — India's Solar Rooftop Analyzer" data-hi="SolarSight — भारत का सोलर रूफटॉप एनालाइज़र">SolarSight — India's Solar Rooftop Analyzer</h3>
-                        <p data-en="India's first Satellite-Powered Solar Rooftop Intelligence Platform; a comprehensive web-based solution that analyzes rooftop solar potential for any Indian address. The platform delivers detailed solar feasibility assessments, personalized equipment recommendations from leading manufacturers, subsidy eligibility information, and state-specific tariff details. Users receive a professional 7-page PDF report with bilingual support (Hindi/English) and seamless sharing via WhatsApp.." data-hi="भारत का पहला सैटेलाइट-संचालित सोलर रूफटॉप इंटेलिजेंस प्लेटफॉर्म — एक व्यापक वेब-आधारित समाधान जो किसी भी भारतीय पते के लिए छत पर सौर ऊर्जा की संभावना का विश्लेषण करता है। यह प्लेटफॉर्म विस्तृत सौर व्यवहार्यता मूल्यांकन, प्रमुख निर्माताओं से व्यक्तिगत उपकरण सिफारिशें, सब्सिडी पात्रता जानकारी और राज्य-विशिष्ट टैरिफ विवरण प्रदान करता है। उपयोगकर्ता एक पेशेवर 7-पृष्ठ पीडीएफ रिपोर्ट प्राप्त करते हैं जिसमें द्विभाषी समर्थन (हिंदी/अंग्रेजी) और व्हाट्सएप के माध्यम से निर्बाध साझाकरण है।">India's first Satellite-Powered Solar Rooftop Intelligence Platform — a comprehensive web-based solution that analyzes rooftop solar potential for any Indian address. The platform delivers detailed solar feasibility assessments, personalized equipment recommendations from leading manufacturers, subsidy eligibility information, and state-specific tariff details. Users receive a professional 7-page PDF report with bilingual support (Hindi/English) and seamless sharing via WhatsApp.</p>
-                    </div>
-                </div>
-
-                <!-- Baadh Mitra -->
-                <div class="project-card" style="border-left: 3px solid var(--accent);">
-                    <div class="project-header">
-                        <div class="project-org" style="display:flex;justify-content:space-between;align-items:center;">
-                            <span>Urban Geo Dynamics — Civic Tech Product</span>
-                            <span style="font-size:0.72rem; background:rgba(255,167,38,0.12); color:#ffa726; padding:2px 10px; border-radius:20px; font-family:'Fira Code',monospace;">🔨 In Development</span>
-                        </div>
-                        <h3 data-en="Baadh Mitra — Village-Level WhatsApp Flood Alerts" data-hi="बाढ़ मित्र — ग्राम-स्तरीय बाढ़ अलर्ट">Baadh Mitra — Village-Level Flood Early Warning System</h3>
-                        <p data-en="A hyper-local flood early warning system that delivers AI-powered, personalized alerts directly to village WhatsApp communities — no app installation required. The platform integrates real-time weather data and flood forecasting information to provide timely, actionable alerts in Hindi. Pilot launch: 50 villages across Bihar, Uttar Pradesh, and Assam starting June 2026." data-hi="एक अति-स्थानीय बाढ़ प्रारंभिक चेतावनी प्रणाली जो कृत्रिम बुद्धिमत्ता द्वारा संचालित, व्यक्तिगत सतर्कताएं सीधे गांव के व्हाट्सएप समुदायों को प्रदान करती है — कोई ऐप इंस्टॉलेशन आवश्यक नहीं है। यह प्लेटफॉर्म रीयल-टाइम मौसम डेटा और बाढ़ पूर्वानुमान जानकारी को एकीकृत करके हिंदी में समय पर, कार्यान्वयन योग्य सतर्कताएं प्रदान करता है। पायलट लॉन्च: जून 2026 से बिहार, उत्तर प्रदेश और असम के 50 गांव।">A hyper-local flood early warning system that delivers AI-powered, personalized alerts directly to village WhatsApp communities — no app installation required. The platform integrates real-time weather data and flood forecasting information to provide timely, actionable alerts in Hindi. Pilot launch: 50 villages across Bihar, Uttar Pradesh, and Assam starting June 2026.</p>
-                    </div>
-                </div>
-
-                <!-- UGD LULC Engine -->
-                <div class="project-card" style="border-left: 3px solid var(--accent);">
-                    <div class="project-header">
-                        <div class="project-org" style="display:flex;justify-content:space-between;align-items:center;">
-                            <span>Urban Geo Dynamics — Core Engine</span>
-                            <span style="font-size:0.72rem; background:rgba(255,167,38,0.12); color:#ffa726; padding:2px 10px; border-radius:20px; font-family:'Fira Code',monospace;">🔨 In Development</span>
-                        </div>
-                        <h3 data-en="UGD LULC Engine — Pan-India Land Use Classification" data-hi="UGD LULC इंजन — अखिल भारत भूमि उपयोग वर्गीकरण">UGD LULC Engine — Pan-India Land Use Classification</h3>
-                        <p data-en="1L+ -line production-grade deep learning pipeline for pan-India Land Use Land Cover classification.Trainned on EuroSAT with 98.1% validation accuracy. 6-phase architecture with full validation and QGIS-integrated labeling workflow. Sub-products: GreenWatch (encroachment alerts), VillageLens (revenue village LULC stats), CarbonSight (carbon credit estimation), ReportGen (automated MoEFCC/EIA reports)." data-hi="पैन-इंडिया LULC के लिए 1L+ लाइन डीप लर्निंग पाइपलाइन। EuroSAT पर 98.1% वैलिडेशन सटीकता। सब-प्रोडक्ट्स: GreenWatch, VillageLens, CarbonSight, ReportGen।">1L+ line production-grade deep learning pipeline for pan-India Land Use Land Cover classification. Trained on EuroSAT with 98.1% validation accuracy. 6-phase architecture with QGIS-integrated labeling. Sub-products: GreenWatch (encroachment alerts), VillageLens (revenue village LULC stats), CarbonSight (carbon credit estimation), ReportGen (automated Hindi + English MoEFCC/EIA reports).</p>
-                    </div>
-                </div>
-
-                <!-- Kuaan Mitra -->
-                <div class="project-card" style="border-left: 3px solid var(--accent);">
-                    <div class="project-header">
-                        <div class="project-org" style="display:flex;justify-content:space-between;align-items:center;">
-                            <span>Urban Geo Dynamics — Upcoming Product</span>
-                            <span style="font-size:0.72rem; background:rgba(66,165,245,0.12); color:#42a5f5; padding:2px 10px; border-radius:20px; font-family:'Fira Code',monospace;">📋 This Year</span>
-                        </div>
-                        <h3 data-en="Kuaan Mitra — AI Borewell Success Predictor" data-hi="कुआं मित्र — AI बोरवेल सफलता भविष्यवक्ता">Kuaan Mitra — AI Borewell Success Predictor</h3>
-                        <p data-en="AI-powered borewell site suitability predictor for Indian farmers and groundwater planners. Uses free government geological, hydrogeological, and remote sensing data to predict borewell success probability at any location — reducing costly drilling failures and water investment risks." data-hi="भारतीय किसानों के लिए AI-संचालित बोरवेल साइट उपयुक्तता भविष्यवक्ता। सरकारी भूवैज्ञानिक और रिमोट सेंसिंग डेटा का उपयोग करके किसी भी स्थान पर बोरवेल सफलता की संभावना का अनुमान।">AI-powered borewell site suitability predictor for Indian farmers and groundwater planners. Uses free government geological, hydrogeological, and remote sensing data to predict borewell success probability at any location — reducing costly drilling failures.</p>
-                    </div>
-                </div>
-
-                <!-- Jameen Mitra -->
-                <div class="project-card" style="border-left: 3px solid var(--accent);">
-                    <div class="project-header">
-                        <div class="project-org" style="display:flex;justify-content:space-between;align-items:center;">
-                            <span>Urban Geo Dynamics — Upcoming</span>
-                            <span style="font-size:0.72rem; background:rgba(66,165,245,0.12); color:#42a5f5; padding:2px 10px; border-radius:20px; font-family:'Fira Code',monospace;">📋 Jul 2026</span>
-                        </div>
-                        <h3 data-en="Jameen Mitra — WhatsApp Land Record Simplifier" data-hi="जमीन मित्र — WhatsApp भूमि रिकॉर्ड सरलीकरण">Jameen Mitra — WhatsApp Land Record Simplifier</h3>
-                        <p data-en="WhatsApp chatbot that simplifies India's Bhulekh land record system for rural citizens. Users send their plot number via WhatsApp and receive easy Hindi summaries of land ownership — no legal literacy required. Phase 1 covers UP, Bihar, and Rajasthan." data-hi="WhatsApp चैटबॉट जो भारत के भूलेख भूमि रिकॉर्ड सिस्टम को ग्रामीण नागरिकों के लिए सरल बनाता है। प्लॉट नंबर भेजें और WhatsApp पर हिंदी में भूमि स्वामित्व सारांश पाएं।">WhatsApp chatbot that simplifies India's Bhulekh land record system for rural citizens. Users send their plot number via WhatsApp and receive easy Hindi summaries of land ownership — no legal literacy required. Phase 1: UP, Bihar, Rajasthan.</p>
-                    </div>
-                </div>
-
-            </div><!-- /UGD projects-grid -->
-
-            <!-- ═══ SECTION: SURVEY OF INDIA ═══ -->
-            <div class="section-label-block" style="margin-bottom:28px; margin-top:56px;">
-                <div style="display:flex; align-items:center; gap:14px;">
-                    <div style="height:2px; flex:1; background:var(--border);"></div>
-                    <span style="font-family:'Fira Code',monospace; font-size:0.78rem; color:var(--text-muted); letter-spacing:0.12em; white-space:nowrap; text-transform:uppercase;">Survey of India — G&amp;RB Department</span>
-                    <div style="height:2px; flex:1; background:var(--border);"></div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-org">Survey of India — NSRF Wing (G&RB) </div>
-                        <h3 data-en="GNSS CORS Network Data Processing" data-hi="GNSS CORS नेटवर्क डेटा प्रोसेसिंग">GNSS CORS Network Data Processing</h3>
-                        <p data-en="Implemented automated GNSS data acquisition and preprocessing pipelines using Python, reducing manual processing time by 12 hours weekly. Processed multi-day GNSS datasets using GAMIT/GLOBK and PRIDE PPP-AR for centimeter-level accuracy across 1023+ reference stations." data-hi="Python का उपयोग करके GNSS डेटा पाइपलाइन को ऑटोमेट किया। 1023+ स्टेशनों पर सेंटीमीटर-स्तरीय सटीकता के लिए GAMIT/GLOBK और PRIDE PPP-AR का उपयोग किया।">Implemented automated GNSS data acquisition and preprocessing pipelines using Python, reducing manual processing time by 12 hours weekly. Processed multi-day GNSS datasets using GAMIT/GLOBK and PRIDE PPP-AR for centimeter-level accuracy across 1023+ reference stations.</p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span><span class="tag">GAMIT/GLOBK</span><span class="tag">PRIDE PPP-AR</span><span class="tag">GNSS</span><span class="tag">RINEX</span><span class="tag">Automation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-org">Survey of India — HPL(G&RB) </div>
-                        <h3 data-en="High Precision Levelling (HPL) Network Processing" data-hi="उच्च सटीकता लेवलिंग (HPL) नेटवर्क प्रोसेसिंग">High Precision Levelling (HPL) Network Processing</h3>
-                         <p data-en="Processed and validated 1,00,780 Ground Control Points (GCP) of High-Precision Levelling data across India for the Geodesy & Research Branch (G&RB) of the Survey of India. Performed height datum computation, loop closure analysis, and systematic error correction across levelling network to maintain national vertical datum accuracy." data-hi="सर्वे ऑफ इंडिया के जियोडेसी एंड रिसर्च ब्रांच (G&RB) के लिए उच्च सटीकता लेवलिंग डेटा प्रोसेस और वैलिडेट किया। राष्ट्रीय वर्टिकल डेटम सटीकता बनाए रखने के लिए हाइट डेटम कंप्यूटेशन, लूप क्लोज़र एनालिसिस और व्यवस्थित त्रुटि सुधार किया।">Processed and validated High Precision Levelling data for the Geodesy & Research Branch (G&RB) of Survey of India. Performed height datum computation, loop closure analysis, and systematic error correction across levelling network to maintain national vertical datum accuracy.</p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">HPL</span><span class="tag">Levelling</span><span class="tag">Geodesy</span><span class="tag">Height Datum</span><span class="tag">Loop Closure</span><span class="tag">QC/QA</span>
-                    </div>
-                </div>
-
-            </div><!-- /SOI projects-grid -->
-
-            <!-- ═══ SECTION: DRDO ═══ -->
-            <div class="section-label-block" style="margin-bottom:28px; margin-top:56px;">
-                <div style="display:flex; align-items:center; gap:14px;">
-                    <div style="height:2px; flex:1; background:var(--border);"></div>
-                    <span style="font-family:'Fira Code',monospace; font-size:0.78rem; color:var(--text-muted); letter-spacing:0.12em; white-space:nowrap; text-transform:uppercase;">DRDO — Ministry of Defence</span>
-                    <div style="height:2px; flex:1; background:var(--border);"></div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-org">DRDO — Ministry of Defence</div>
-                        <h3 data-en="Flood Risk Mapping & Spatial Analysis" data-hi="बाढ़ जोखिम मैपिंग और स्पेशियल एनालिसिस">Flood Risk Mapping & Spatial Analysis</h3>
-                        <p data-en="Performed flood risk mapping using QGIS by analyzing terrain and elevation-based spatial layers to identify flood-prone areas above 1M sea level rise. Integrated 5+ geospatial layers including terrain, elevation, and drainage to identify vulnerable zones." data-hi="QGIS का उपयोग करके बाढ़ जोखिम मैपिंग की। 5+ जियोस्पेशियल लेयर्स इंटीग्रेट कर कमजोर क्षेत्रों की पहचान की।">Performed flood risk mapping using QGIS by analyzing terrain and elevation-based spatial layers to identify flood-prone areas above 1M sea level rise. Integrated 5+ geospatial layers including terrain, elevation, and drainage to identify vulnerable zones.</p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">QGIS</span><span class="tag">Flood Risk</span><span class="tag">DEM</span><span class="tag">Spatial Analysis</span><span class="tag">Thematic Mapping</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-org">DRDO — Ministry of Defence</div>
-                        <h3 data-en="LiDAR & Hyperspectral Data Analysis" data-hi="LiDAR और हाइपरस्पेक्ट्रल डेटा एनालिसिस">LiDAR & Hyperspectral Data Analysis</h3>
-                        <p data-en="Analyzed high-density LiDAR point cloud data containing ~3 million points using Spectral Python to study terrain characteristics. Developed Python scripts for preprocessing and filtering large LiDAR and hyperspectral datasets." data-hi="~30 लाख पॉइंट्स वाले LiDAR पॉइंट क्लाउड डेटा का Spectral Python से विश्लेषण। LiDAR और हाइपरस्पेक्ट्रल डेटा के लिए पायथन स्क्रिप्ट विकसित किए।">Analyzed high-density LiDAR point cloud data containing ~3 million points using Spectral Python to study terrain characteristics. Developed Python scripts for preprocessing and filtering large LiDAR and hyperspectral datasets.</p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span><span class="tag">LiDAR</span><span class="tag">Spectral Python</span><span class="tag">laspy</span><span class="tag">Point Cloud</span><span class="tag">Hyperspectral</span>
-                    </div>
-                </div>
-            </div><!-- /DRDO projects-grid -->
-
+    <section class="section section--flush-top" data-filter-scope data-noun="projects" data-hash>
+      <div class="container">
+        <div class="projects-tools">
+          <div class="filter-bar" role="group" aria-label="Filter projects by category">
+            <button type="button" class="chip" data-filter="all" aria-pressed="true">All<span class="chip__count"></span></button>
+            <button type="button" class="chip" data-filter="gis" aria-pressed="false">GIS<span class="chip__count"></span></button>
+            <button type="button" class="chip" data-filter="gnss" aria-pressed="false">GNSS<span class="chip__count"></span></button>
+            <button type="button" class="chip" data-filter="web" aria-pressed="false">Web<span class="chip__count"></span></button>
+            <button type="button" class="chip" data-filter="data" aria-pressed="false">Data<span class="chip__count"></span></button>
+            <button type="button" class="chip" data-filter="research" aria-pressed="false">Research<span class="chip__count"></span></button>
+          </div>
+          <p class="filter-status" data-filter-status role="status" aria-live="polite"></p>
         </div>
+        <div class="card-grid">
+          <article class="card" data-cats="gis web data">
+            <figure class="card__media"><img src="../assets/images/projects/solarsight-800.webp" srcset="../assets/images/projects/solarsight-800.webp 800w, ../assets/images/projects/solarsight-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Solar panels on a tiled house roof" width="800" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Uday GeoAnalytics Consultancy</span><span class="status status--live">Deploying</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/solarsight.html">SolarSight: rooftop solar checks for Indian homes</a></h3>
+              <p class="card__text">A free tool that works out how much solar a rooftop can take. Enter your location, answer a few questions about your roof, and get a 7-page PDF report in under 2 minutes.</p>
+              <ul class="tag-list"><li class="tag">GIS</li><li class="tag">Web</li><li class="tag">Solar</li><li class="tag">Maps</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="gis web data">
+            <figure class="card__media"><img src="../assets/images/projects/baadh-mitra-800.webp" srcset="../assets/images/projects/baadh-mitra-800.webp 800w, ../assets/images/projects/baadh-mitra-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Aerial view of flood-affected villages in Bihar" width="800" height="532" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Uday GeoAnalytics Consultancy</span><span class="status status--dev">In Development</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/baadh-mitra.html">Baadh Mitra: flood alerts for villages</a></h3>
+              <p class="card__text">A flood early warning system for villages. AI writes the alerts and they go straight to village WhatsApp groups, so nobody has to install an app.</p>
+              <ul class="tag-list"><li class="tag">Web</li><li class="tag">Flood</li><li class="tag">WhatsApp</li><li class="tag">Data</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="gis data">
+            <figure class="card__media"><img src="../assets/images/projects/ugd-lulc-800.webp" srcset="../assets/images/projects/ugd-lulc-800.webp 800w, ../assets/images/projects/ugd-lulc-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Satellite image of farmland in West Bengal" width="800" height="487" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Uday GeoAnalytics Consultancy</span><span class="status status--dev">In Development</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/ugd-lulc.html">UGD LULC Engine: land use classification for India</a></h3>
+              <p class="card__text">A deep learning pipeline that classifies land use and land cover across India. Trained on EuroSAT, it reaches 98.1% validation accuracy.</p>
+              <ul class="tag-list"><li class="tag">GIS</li><li class="tag">Deep Learning</li><li class="tag">Python</li><li class="tag">Data</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="gis data">
+            <figure class="card__media"><img src="../assets/images/projects/kuaan-mitra-800.webp" srcset="../assets/images/projects/kuaan-mitra-800.webp 800w, ../assets/images/projects/kuaan-mitra-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Borewell drilling rig near Kallakurichi, Tamil Nadu" width="800" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Uday GeoAnalytics Consultancy</span><span class="status status--dev">In Development</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/kuaan-mitra.html">Kuaan Mitra: borewell success predictor</a></h3>
+              <p class="card__text">Estimates the chance that a borewell will succeed at a given spot. Built for farmers and groundwater planners, using free government geological, hydrogeological and remote sensing data.</p>
+              <ul class="tag-list"><li class="tag">GIS</li><li class="tag">Groundwater</li><li class="tag">AI</li><li class="tag">Data</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="web data">
+            <figure class="card__media"><img src="../assets/images/projects/jameen-mitra-800.webp" srcset="../assets/images/projects/jameen-mitra-800.webp 800w, ../assets/images/projects/jameen-mitra-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Aerial view of farm plots in Punjab" width="800" height="450" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Uday GeoAnalytics Consultancy</span><span class="status status--dev">In Development</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/jameen-mitra.html">Jameen Mitra: land records on WhatsApp</a></h3>
+              <p class="card__text">A WhatsApp chatbot for India's Bhulekh land records. Send a plot number and get a plain-language summary of who owns the land.</p>
+              <ul class="tag-list"><li class="tag">Web</li><li class="tag">WhatsApp</li><li class="tag">Land Records</li><li class="tag">Data</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="gnss data">
+            <figure class="card__media"><img src="../assets/images/projects/gnss-cors-800.webp" srcset="../assets/images/projects/gnss-cors-800.webp 800w, ../assets/images/projects/gnss-cors-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="GNSS antenna mounted on a survey pole" width="800" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Survey of India, NSRF Wing (G&amp;RB)</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/gnss-cors.html">GNSS CORS network data processing</a></h3>
+              <p class="card__text">Python scripts that download and prepare GNSS data from 1023+ reference stations. The data is then processed in GAMIT/GLOBK and PRIDE PPP-AR to centimeter-level accuracy.</p>
+              <ul class="tag-list"><li class="tag">Python</li><li class="tag">GAMIT/GLOBK</li><li class="tag">PRIDE PPP-AR</li><li class="tag">GNSS</li><li class="tag">RINEX</li><li class="tag">Automation</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="gnss data">
+            <figure class="card__media"><img src="../assets/images/projects/hpl-800.webp" srcset="../assets/images/projects/hpl-800.webp 800w, ../assets/images/projects/hpl-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Survey level on a tripod in a field" width="800" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>Survey of India, HPL Wing (G&amp;RB)</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/hpl.html">High Precision Levelling (HPL) network processing</a></h3>
+              <p class="card__text">Processing and checking High Precision Levelling data for the Geodesy &amp; Research Branch: height datum computation, loop closure analysis and systematic error correction.</p>
+              <ul class="tag-list"><li class="tag">HPL</li><li class="tag">Levelling</li><li class="tag">Geodesy</li><li class="tag">Height Datum</li><li class="tag">Loop Closure</li><li class="tag">QC/QA</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="gis research">
+            <figure class="card__media"><img src="../assets/images/projects/flood-risk-800.webp" srcset="../assets/images/projects/flood-risk-800.webp 800w, ../assets/images/projects/flood-risk-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="Satellite image of flooding along the Brahmaputra River" width="800" height="631" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>DRDO, Ministry of Defence</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/flood-risk.html">Flood risk mapping and spatial analysis</a></h3>
+              <p class="card__text">Mapping the areas that flood above a 1 m sea level rise, using terrain, elevation and drainage layers in QGIS.</p>
+              <ul class="tag-list"><li class="tag">QGIS</li><li class="tag">Flood Risk</li><li class="tag">DEM</li><li class="tag">Spatial Analysis</li><li class="tag">Thematic Mapping</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+          <article class="card" data-cats="data research">
+            <figure class="card__media"><img src="../assets/images/projects/lidar-800.webp" srcset="../assets/images/projects/lidar-800.webp 800w, ../assets/images/projects/lidar-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1023px) 45vw, 380px" alt="LiDAR point cloud of city buildings" width="800" height="478" loading="lazy" decoding="async"></figure>
+            <div class="card__body">
+              <p class="card__meta mono"><span>DRDO, Ministry of Defence</span></p>
+              <h3 class="card__title"><a class="card__link" href="../pages/project/lidar.html">LiDAR and hyperspectral data analysis</a></h3>
+              <p class="card__text">Analysis of a dense LiDAR point cloud (about 3 million points) with Spectral Python, and Python scripts to clean and filter large LiDAR and hyperspectral datasets.</p>
+              <ul class="tag-list"><li class="tag">Python</li><li class="tag">LiDAR</li><li class="tag">Spectral Python</li><li class="tag">laspy</li><li class="tag">Point Cloud</li><li class="tag">Hyperspectral</li></ul>
+              <p class="card__foot"><span>Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+          </article>
+        </div>
+        <section class="photo-credits" id="photo-credits" aria-labelledby="photo-credits-title">
+          <h2 class="mono" id="photo-credits-title">Photo credits</h2>
+          <p>The photos show the kind of place or equipment each project deals with. They are not taken from the projects themselves.</p>
+          <ul>
+            <li><span class="mono">Solar panels on a tiled house roof</span><span>Photo: Kolforn, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:-2019-09-26_Solar_panels_on_a_roof_of_a_house_on_Overstrand_road,_Cromer.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Aerial view of flood-affected villages in Bihar</span><span>Photo: Ministry of Information and Broadcasting, Government of India, <a href="https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf" target="_blank" rel="noopener">GODL-India</a>, via <a href="https://commons.wikimedia.org/wiki/File:An_aerial_view_of_the_flood_affected_villages_in_Bihar.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Satellite image of farmland in West Bengal</span><span>Photo: Sentinel Hub (contains modified Copernicus Sentinel data), <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Agriculture_in_West_Bengal,_India_(50304489911).png" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Borewell drilling rig near Kallakurichi, Tamil Nadu</span><span>Photo: தகவலுழவன் (Thagavaluzhavan), <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Lorry,borewell,near_kallakurichi,Tamil_Nadu422.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Aerial view of farm plots in Punjab</span><span>Photo: Bhullargraphic, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_agricultural_fields_in_Punjab,_India.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">GNSS antenna mounted on a survey pole</span><span>Photo: LubGua987, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Geodetic_survey_instruments_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Survey level on a tripod in a field</span><span>Photo: Cvstr, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Survey_level_and_field_technician.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Satellite image of flooding along the Brahmaputra River</span><span>Photo: MODIS Land Rapid Response Team, NASA GSFC, Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Flooding_along_the_Brahmaputra_River_(MODIS_2021-09-17).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">LiDAR point cloud of city buildings</span><span>Photo: FuzzyGeo, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:BNF_Lidar_HD.png" target="_blank" rel="noopener">Wikimedia Commons</a></span></li>
+            <li><span class="mono">Region map (Home, Research)</span><span>Satellite imagery: <a href="https://s2maps.eu" target="_blank" rel="noopener">Sentinel-2 cloudless</a> by EOX IT Services GmbH, contains modified Copernicus Sentinel data 2016, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></li>
+          </ul>
+        </section>
+      </div>
     </section>
+  </main>
 
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 data-en="Have a Project in Mind?" data-hi="कोई प्रोजेक्ट है दिमाग में?">Have a Project in Mind?</h2>
-                <p data-en="I'm always open to collaborating on geospatial projects. Let's discuss how I can help." data-hi="मैं हमेशा जियोस्पेशियल प्रोजेक्ट्स पर सहयोग के लिए तैयार हूँ।">I'm always open to collaborating on geospatial projects. Let's discuss how I can help.</p>
-                <a href="contact.html" class="btn btn-primary"><span data-en="Get In Touch" data-hi="संपर्क करें">Get In Touch</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top grid">
+        <div class="site-footer__brand g-lg-5 g-md-8">
+          <a class="brand" href="../index.html" aria-label="Aditya Jha, home page">Aditya Jha</a>
+          <p>GIS Engineer · Python Developer · Location Technology Enthusiast</p>
+          <p class="mono">Maps. People. Possibilities.</p>
         </div>
-    </section>
+        <nav class="g-lg-4 g-md-4" aria-label="Footer">
+          <p class="mono site-footer__title">Pages</p>
+          <ul class="site-footer__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/research.html">Research</a></li>
+            <li><a href="../pages/skills.html">Skills</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="g-lg-3 g-md-4">
+          <p class="mono site-footer__title">Connect</p>
+          <ul class="social-list">
+            <li><a href="https://github.com/adityagis" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.95c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+            <li><a href="mailto:adityajha976@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aditya Kumar Jha. All rights reserved. <a class="footer-credit" href="../pages/projects.html#photo-credits">Photo credits</a></p>
+        <p class="visitors" id="visitors" hidden>Total visitors: <span data-visitors-count></span></p>
+      </div>
+    </div>
+  </footer>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"><span class="nav-logo"><span class="logo-mark">A</span>ditya<span class="logo-dot">.</span></span><p>Geoinformatics Professional</p></div>
-                <div class="footer-links"><a href="../index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a></div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/adityaashujha/" target="_blank" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                    <a href="mailto:adityajha976@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg></a>
-                </div>
-            </div>
-            <div class="footer-bottom"><p>© 2026 Aditya Kumar Jha. All rights reserved.</p></div>
-        </div>
-    </footer>
-    <script src="../js/main.js"></script>
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/projects.js" defer></script>
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script data-goatcounter="https://adityagis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

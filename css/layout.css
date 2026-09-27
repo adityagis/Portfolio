@@ -1,0 +1,92 @@
+/* =============================================================
+   LAYOUT — container, 12/8/4 grid, sections, section heads
+   ============================================================= */
+main { flex: 1 0 auto; width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Grid: 12 columns desktop, 8 tablet, 4 mobile (columns set in responsive.css) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 12), minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  row-gap: var(--grid-gap);
+}
+.grid > * { grid-column: span var(--span, var(--cols, 12)); min-width: 0; }
+
+/* Span helpers — lg = desktop/large, md = tablet, sm = mobile */
+.g-lg-3  { --span-lg: 3; }  .g-lg-4  { --span-lg: 4; }  .g-lg-5  { --span-lg: 5; }
+.g-lg-6  { --span-lg: 6; }  .g-lg-7  { --span-lg: 7; }  .g-lg-8  { --span-lg: 8; }
+.g-lg-9  { --span-lg: 9; }  .g-lg-12 { --span-lg: 12; }
+.g-md-2  { --span-md: 2; }  .g-md-4  { --span-md: 4; }  .g-md-5  { --span-md: 5; }
+.g-md-6  { --span-md: 6; }  .g-md-8  { --span-md: 8; }
+.g-sm-4  { --span-sm: 4; }
+
+.grid > [class*="g-"] { --span: var(--span-lg, 12); }
+
+/* Sections */
+.section { padding-block: var(--section-y); }
+.section--tight { padding-block: var(--s-9); }
+.section--flush-top { padding-top: 0; }
+.section--flush-bottom { padding-bottom: 0; }
+.section--rule { border-top: 1px solid var(--border); }
+.section--surface { background: var(--surface); border-block: 1px solid var(--border); transition: background-color var(--t-mode) ease, border-color var(--t-mode) ease; }
+
+/* Section head: mono number + heading on the common grid */
+.section-head {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 12), minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  row-gap: var(--s-3);
+  align-items: start;
+  padding-top: var(--s-4);
+  margin-bottom: var(--s-8);
+  border-top: 1px solid var(--border-strong);
+  transition: border-color var(--t-mode) ease;
+}
+.section-head__num {
+  grid-column: 1 / span 3;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  line-height: var(--lh-mono);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding-top: var(--s-2);
+}
+.section-head__body { grid-column: 4 / -1; display: grid; gap: var(--s-3); }
+.section-head__lead { color: var(--text-secondary); max-width: 60ch; }
+.section-head__action { margin-top: var(--s-3); }
+
+/* Page header (inner pages) */
+.page-head { padding-block: var(--s-10) var(--s-9); }
+.page-head__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+  margin-bottom: var(--s-6);
+}
+.page-head__title { margin-bottom: var(--s-5); }
+.page-head__lead {
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+  color: var(--text-secondary);
+  max-width: 56ch;
+}
+
+/* Mono label — shared caption style */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  line-height: var(--lh-mono);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.mono--secondary { color: var(--text-secondary); }
