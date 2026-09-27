@@ -182,7 +182,7 @@
         <div class="grid story">
           <div class="story__text g-lg-7 g-md-8">
             <p class="lead">I've been doing geospatial research for more than four years, including work at DRDO and at Survey of India's Geodetic &amp; Research Branch. Most of that work is about taking raw spatial data and automating the steps between the data and a decision.</p>
-            <p>At Survey of India I manage two wings. The NSRF Wing processes GNSS CORS data from 1023+ reference stations, and the HPL Wing maintains India's national vertical datum. My scripts brought GNSS processing down from 7 days to 3 days per station, and a month of levelling analysis now takes a single day. QA/QC checks such as the Tau test and global statistical validation run inside the scripts, so manual errors don't get through.</p>
+            <p>At Survey of India I manage two wings. The NSRF Wing processes GNSS CORS data from 1023+ reference stations, and the HPL Wing maintains India's national vertical datum. My scripts brought GNSS processing down from 7 days to 3 days per station, and my levelling adjustment software made HPL computation about 100 times faster. QA/QC checks such as the Tau test and global statistical validation run inside the scripts, so manual errors don't get through.</p>
             <p>At DRDO's Defence Geoinformatics Research Establishment I processed about 3 million LiDAR points and 32 hyperspectral bands. I used them to build flood inundation models and terrain vulnerability assessments for defence planning and disaster preparedness.</p>
             <p>I also started the Geospatial Technology Club at NSUT. It grew to 200+ members from across India, and we brought in industry professionals for talks and workshops.</p>
             <p>I try to write code that someone else can pick up later: clean, documented, and built to keep working as the data grows. The work I enjoy most is research where the numbers have to be right.</p>
@@ -223,7 +223,7 @@
       </header>
         <div class="pillars" data-reveal>
           <article class="pillar"><p class="mono mono--secondary">01</p><h3>Location technology</h3><p class="pillar__text">Everything I do starts with GIS, GNSS and remote sensing. That means GAMIT/GLOBK and PRIDE PPP-AR processing for 1023+ CORS stations, LiDAR and hyperspectral analysis, and drone mapping.</p></article>
-          <article class="pillar"><p class="mono mono--secondary">02</p><h3>From data to decisions</h3><p class="pillar__text">My pipelines have QA/QC checks built in (Tau test, global statistical validation), and they cut GNSS processing from 7 days to 3 days per station and a month of levelling analysis to one day.</p></article>
+          <article class="pillar"><p class="mono mono--secondary">02</p><h3>From data to decisions</h3><p class="pillar__text">My pipelines have QA/QC checks built in (Tau test, global statistical validation), and they cut GNSS processing from 7 days to 3 days per station and made levelling computation about 100x faster.</p></article>
           <article class="pillar"><p class="mono mono--secondary">03</p><h3>Work that gets used</h3><p class="pillar__text">I did flood risk planning for defence at DRDO, and I'm building SolarSight and Baadh Mitra at Uday GeoAnalytics Consultancy for rooftop solar and village flood alerts. I also started a Geospatial Technology Club at NSUT that grew to 200+ members.</p></article>
         </div>
       </div>
@@ -310,7 +310,7 @@
             <p class="entry__note">I work across two wings:</p>
             <ul class="bullets">
               <li><strong>NSRF Wing:</strong> Processing GNSS CORS data from 1023+ reference stations with GAMIT/GLOBK and PRIDE PPP-AR. My Python automation brought processing time down from 7 days to 3 days per station. I also worked with a team of 5 geodetic engineers to standardise data collection across the stations.</li>
-              <li><strong>HPL Wing:</strong> Processing High Precision Levelling data for India's national vertical datum. I automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. A month of work now takes a day.</li>
+              <li><strong>HPL Wing:</strong> Processing High Precision Levelling data for India's national vertical datum. I automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. I also built an adjustment software that processes 1,00,000+ observations together in real time, making HPL computation about 100x faster.</li>
             </ul>
           </div>
         </article>
@@ -353,10 +353,26 @@
       </div>
     </section>
 
-    <section class="section section--rule" aria-labelledby="interests">
+    <section class="section section--rule" aria-labelledby="references">
       <div class="container">
       <header class="section-head" data-reveal>
         <p class="section-head__num">02.6</p>
+        <div class="section-head__body">
+          <h2 id="references">References</h2>
+          <p class="section-head__lead">People I have worked with at Survey of India. Contact details are available on request.</p>
+        </div>
+      </header>
+        <ul class="bullets detail-body" style="max-width:68ch" data-reveal>
+          <li style="font-size:var(--fs-body);line-height:var(--lh-body)"><strong>Shri Sunil Kumar Singh</strong>, Deputy Superintending Surveyor, Survey of India</li>
+          <li style="font-size:var(--fs-body);line-height:var(--lh-body)"><strong>Shri Videsh Chauhan</strong>, Officer Surveyor, Survey of India</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--rule" aria-labelledby="interests">
+      <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="section-head__num">02.7</p>
         <div class="section-head__body">
           <h2 id="interests">Interests</h2>
         </div>

@@ -192,7 +192,7 @@
         <div class="detail-tags"><ul class="tag-list"><li class="tag">HPL</li><li class="tag">Levelling</li><li class="tag">Geodesy</li><li class="tag">Height Datum</li><li class="tag">Loop Closure</li><li class="tag">QC/QA</li></ul></div>
         <dl class="stats detail-metrics">
           <div class="stat"><dt>GCPs processed</dt><dd class="stat__value">1,00,780</dd></div>
-          <div class="stat"><dt>Was 1 month</dt><dd class="stat__value">1 day</dd></div>
+          <div class="stat"><dt>Faster computation</dt><dd class="stat__value">~100x</dd></div>
           <div class="stat"><dt>Vertical datum</dt><dd class="stat__value">National</dd></div>
         </dl>
       </div>
@@ -209,7 +209,8 @@
         <div class="grid">
           <div class="detail-body g-lg-8 g-md-8">
             <p>I processed and validated High Precision Levelling data for 1,00,780 Ground Control Points (GCPs) across India, for the Geodesy &amp; Research Branch (G&amp;RB) of Survey of India. The work covers height datum computation, loop closure analysis and correcting systematic errors across the levelling network, so the national vertical datum stays accurate.</p>
-            <p>I also automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. What used to take a month now takes a day.</p>
+            <p>I also automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in.</p>
+            <p>For the HPL Wing I built an adjustment software that processes all 1,00,000+ unique levelling observations together, in real time. Earlier software could not adjust every observation at once. HPL computation is now about 100 times faster, and this can be verified with the HPL Wing, Survey of India. I explain how it works in a <a href="../notes/hpl-adjustment-software.html">technical note</a>.</p>
             
           </div>
         </div>
@@ -252,11 +253,11 @@
           </li>
           <li class="step">
             <p class="step__label mono"><b>04</b> System</p>
-            <div class="step__body"><p>Automated calculations with QA/QC built in (Tau test and global statistical validation).</p></div>
+            <div class="step__body"><p>An adjustment software that processes 1,00,000+ observations together in real time, with QA/QC built in (Tau test and global statistical validation).</p></div>
           </li>
           <li class="step">
             <p class="step__label mono"><b>05</b> Result</p>
-            <div class="step__body"><p>A month of levelling analysis now takes 1 day.</p></div>
+            <div class="step__body"><p>HPL computation is about 100x faster.</p></div>
           </li>
         </ol>
       </div>
@@ -272,7 +273,7 @@
       </header>
         <ul class="bullets detail-body" style="max-width:68ch">
           <li style="font-size:var(--fs-body);line-height:var(--lh-body)">1,00,780 Ground Control Points processed and validated.</li>
-          <li style="font-size:var(--fs-body);line-height:var(--lh-body)">1-month workflow reduced to 1 day.</li>
+          <li style="font-size:var(--fs-body);line-height:var(--lh-body)">1,00,000+ observations adjusted together in real time, about 100x faster than before.</li>
           <li style="font-size:var(--fs-body);line-height:var(--lh-body)">Fewer manual errors, thanks to built-in QA/QC checks.</li>
         </ul>
         <div class="detail-foot">

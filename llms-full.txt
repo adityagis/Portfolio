@@ -72,7 +72,7 @@ About
 Geoinformatics engineer, based in Dehradun.
 ### My story
 I've been doing geospatial research for more than four years, including work at DRDO and at Survey of India's Geodetic & Research Branch. Most of that work is about taking raw spatial data and automating the steps between the data and a decision.
-At Survey of India I manage two wings. The NSRF Wing processes GNSS CORS data from 1023+ reference stations, and the HPL Wing maintains India's national vertical datum. My scripts brought GNSS processing down from 7 days to 3 days per station, and a month of levelling analysis now takes a single day. QA/QC checks such as the Tau test and global statistical validation run inside the scripts, so manual errors don't get through.
+At Survey of India I manage two wings. The NSRF Wing processes GNSS CORS data from 1023+ reference stations, and the HPL Wing maintains India's national vertical datum. My scripts brought GNSS processing down from 7 days to 3 days per station, and my levelling adjustment software made HPL computation about 100 times faster. QA/QC checks such as the Tau test and global statistical validation run inside the scripts, so manual errors don't get through.
 At DRDO's Defence Geoinformatics Research Establishment I processed about 3 million LiDAR points and 32 hyperspectral bands. I used them to build flood inundation models and terrain vulnerability assessments for defence planning and disaster preparedness.
 I also started the Geospatial Technology Club at NSUT. It grew to 200+ members from across India, and we brought in industry professionals for talks and workshops.
 I try to write code that someone else can pick up later: clean, documented, and built to keep working as the data grows. The work I enjoy most is research where the numbers have to be right.
@@ -95,7 +95,7 @@ Three things that shape how I work.
 #### Location technology
 Everything I do starts with GIS, GNSS and remote sensing. That means GAMIT/GLOBK and PRIDE PPP-AR processing for 1023+ CORS stations, LiDAR and hyperspectral analysis, and drone mapping.
 #### From data to decisions
-My pipelines have QA/QC checks built in (Tau test, global statistical validation), and they cut GNSS processing from 7 days to 3 days per station and a month of levelling analysis to one day.
+My pipelines have QA/QC checks built in (Tau test, global statistical validation), and they cut GNSS processing from 7 days to 3 days per station and made levelling (HPL) computation about 100x faster with a real-time adjustment software for 1,00,000+ observations.
 #### Work that gets used
 I did flood risk planning for defence at DRDO, and I'm building SolarSight and Baadh Mitra at Uday GeoAnalytics Consultancy for rooftop solar and village flood alerts. I also started a Geospatial Technology Club at NSUT that grew to 200+ members.
 ### Timeline
@@ -146,7 +146,7 @@ Dehradun
 GIS Engineer, Survey of India
 I work across two wings:
 - NSRF Wing: Processing GNSS CORS data from 1023+ reference stations with GAMIT/GLOBK and PRIDE PPP-AR. My Python automation brought processing time down from 7 days to 3 days per station. I also worked with a team of 5 geodetic engineers to standardise data collection across the stations.
-- HPL Wing: Processing High Precision Levelling data for India's national vertical datum. I automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. A month of work now takes a day.
+- HPL Wing: Processing High Precision Levelling data for India's national vertical datum. I automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. HPL computation is now about 100x faster.
 2023–Present
 India
 #### Uday GeoAnalytics Consultancy
@@ -491,13 +491,13 @@ Photo: Cvstr, CC BY 4.0, via Wikimedia Commons
 - QC/QA
 GCPs processed
 1,00,780
-Was 1 month
-1 day
+Faster computation
+~100x
 Vertical datum
 National
 ### Overview
 I processed and validated High Precision Levelling data for 1,00,780 Ground Control Points (GCPs) across India, for the Geodesy & Research Branch (G&RB) of Survey of India. The work covers height datum computation, loop closure analysis and correcting systematic errors across the levelling network, so the national vertical datum stays accurate.
-I also automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. What used to take a month now takes a day.
+I also automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. An adjustment software processes all 1,00,000+ observations together in real time, making HPL computation about 100x faster.
 ### Tech stack
 - High Precision Levelling
 - Helmert orthometric heights
@@ -515,10 +515,10 @@ Height datum computation, loop closure analysis and systematic error correction;
 04 System
 Automated calculations with QA/QC built in (Tau test and global statistical validation).
 05 Result
-A month of levelling analysis now takes 1 day.
+HPL computation is about 100x faster.
 ### Results
 - 1,00,780 Ground Control Points processed and validated.
-- 1-month workflow reduced to 1 day.
+- 1,00,000+ observations adjusted together in real time, about 100x faster.
 - Fewer manual errors, thanks to built-in QA/QC checks.
 All projects Discuss a project
 

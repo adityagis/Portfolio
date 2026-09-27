@@ -5,7 +5,7 @@
 Key facts:
 
 - Current role: GIS Engineer, Survey of India, Geodetic & Research Branch (G&RB), Dehradun (June 2025 to present). Works across the NSRF Wing (GNSS CORS processing) and the HPL Wing (High Precision Levelling for India's national vertical datum).
-- Impact: Python automation cut GNSS processing from 7 days to 3 days per station, and a month of levelling analysis to one day, with QA/QC (Tau test, global statistical validation) built in.
+- Impact: Python automation cut GNSS processing from 7 days to 3 days per station, and made levelling (HPL) computation about 100x faster with a real-time adjustment software for 1,00,000+ observations, with QA/QC (Tau test, global statistical validation) built in.
 - Consulting: Consulting Head, Uday GeoAnalytics Consultancy (formerly Urban Geo Dynamics), 2023 to present. Builds SolarSight, Baadh Mitra, UGD LULC Engine, Kuaan Mitra and Jameen Mitra.
 - Previous: Research Intern, Defence Geoinformatics Research Establishment (DGRE), DRDO, Chandigarh (Jul to Dec 2024): ~3 million LiDAR points, 32 hyperspectral bands, flood inundation and terrain vulnerability models.
 - Education: B.Tech in GeoInformatics, Netaji Subhas University of Technology (NSUT), Delhi, 2021 to 2025. Founded the Geospatial Technology Club at NSUT (200+ members).
