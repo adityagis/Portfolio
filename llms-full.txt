@@ -1,0 +1,842 @@
+# Aditya Kumar Jha: full site text
+
+> Plain-text copy of every page on https://adityagis.github.io/Portfolio/ for language models and search tools. Summary and links: https://adityagis.github.io/Portfolio/llms.txt
+
+
+---
+
+Page: Aditya Kumar Jha | GIS Engineer: GNSS, Python, LiDAR
+URL: https://adityagis.github.io/Portfolio/
+
+GIS Engineer · Python Developer · Location Technology Enthusiast
+## I work with maps, GNSS data and Python.
+I'm a GIS engineer at Survey of India, where I process GNSS data from 1023+ reference stations. I write the Python scripts that handle the slow, repetitive parts of that work. Before this, I worked on LiDAR and flood mapping at DRDO.
+See my work Download resume
+- GIS Engineer, Survey of India (NSRF Project)
+- Consulting Head, Uday GeoAnalytics Consultancy
+GNSS Stations
+1023+
+LiDAR Points
+3M+
+Saved Weekly
+12 hrs
+### Selected work
+A few projects from Survey of India, DRDO and my consultancy work.
+All projects
+Uday GeoAnalytics ConsultancyDeploying
+#### SolarSight: rooftop solar checks for Indian homes
+A free tool that works out how much solar a rooftop can take. Enter your location, answer a few questions about your roof, and get a 7-page PDF report in under 2 minutes.
+- GIS
+- Web
+- Solar
+- Maps
+Survey of India, NSRF Wing (G&RB)
+#### GNSS CORS network data processing
+Python scripts that download and prepare GNSS data from 1023+ reference stations. The data is then processed in GAMIT/GLOBK and PRIDE PPP-AR to centimeter-level accuracy.
+- Python
+- GAMIT/GLOBK
+- PRIDE PPP-AR
+- GNSS
+- RINEX
+- Automation
+DRDO, Ministry of Defence
+#### Flood risk mapping and spatial analysis
+Mapping the areas that flood above a 1 m sea level rise, using terrain, elevation and drainage layers in QGIS.
+- QGIS
+- Flood Risk
+- DEM
+- Spatial Analysis
+- Thematic Mapping
+### What I work on
+The kinds of work I take on.
+#### GIS and spatial analysis
+Spatial analysis in ArcGIS Pro and QGIS, backed by PostGIS. I've used it for infrastructure planning, flood risk and land use maps.
+ArcGIS · QGIS · PostGIS · GeoServer
+#### GNSS data processing
+High-precision positioning with GAMIT/GLOBK and PRIDE PPP-AR. I batch-process 365-day datasets from 1023+ CORS stations to cm-level accuracy.
+GAMIT/GLOBK · PPP-AR · RINEX · Python
+#### Python automation
+Scripts that save 12 hours of manual processing a week, and ETL pipelines built with ArcPy, GeoPandas, Rasterio and GDAL.
+Python · ArcPy · GeoPandas · Rasterio · GDAL
+#### LiDAR and remote sensing
+LiDAR point clouds of 3M+ points and hyperspectral images. Also drone mapping, DEMs and environmental monitoring from satellite data.
+LiDAR · laspy · ENVI · Google Earth Engine
+
+---
+
+Page: About Aditya Kumar Jha | GIS Engineer, Survey of India
+URL: https://adityagis.github.io/Portfolio/pages/about.html
+
+About
+## About me
+Geoinformatics engineer, based in Dehradun.
+### My story
+I've been doing geospatial research for more than four years, including work at DRDO and at Survey of India's Geodetic & Research Branch. Most of that work is about taking raw spatial data and automating the steps between the data and a decision.
+At Survey of India I manage two wings. The NSRF Wing processes GNSS CORS data from 1023+ reference stations, and the HPL Wing maintains India's national vertical datum. My scripts brought GNSS processing down from 7 days to 3 days per station, and a month of levelling analysis now takes a single day. QA/QC checks such as the Tau test and global statistical validation run inside the scripts, so manual errors don't get through.
+At DRDO's Defence Geoinformatics Research Establishment I processed about 3 million LiDAR points and 32 hyperspectral bands. I used them to build flood inundation models and terrain vulnerability assessments for defence planning and disaster preparedness.
+I also started the Geospatial Technology Club at NSUT. It grew to 200+ members from across India, and we brought in industry professionals for talks and workshops.
+I try to write code that someone else can pick up later: clean, documented, and built to keep working as the data grows. The work I enjoy most is research where the numbers have to be right.
+Looking for
+I'm looking for research roles, consulting work, and startups working on hard geospatial problems with real users. If that sounds like your team, get in touch.
+Get in touch
+Current role
+GIS Engineer, Survey of India (G&RB)
+Consulting
+Consulting Head, Uday GeoAnalytics Consultancy
+Education
+B.Tech GeoInformatics, NSUT Delhi (2025)
+Location
+Dehradun, India
+Email
+adityajha976@gmail.com
+Download resume
+### Approach
+Three things that shape how I work.
+#### Location technology
+Everything I do starts with GIS, GNSS and remote sensing. That means GAMIT/GLOBK and PRIDE PPP-AR processing for 1023+ CORS stations, LiDAR and hyperspectral analysis, and drone mapping.
+#### From data to decisions
+My pipelines have QA/QC checks built in (Tau test, global statistical validation), and they cut GNSS processing from 7 days to 3 days per station and a month of levelling analysis to one day.
+#### Work that gets used
+I did flood risk planning for defence at DRDO, and I'm building SolarSight and Baadh Mitra at Uday GeoAnalytics Consultancy for rooftop solar and village flood alerts. I also started a Geospatial Technology Club at NSUT that grew to 200+ members.
+### Timeline
+- 2009–2019
+#### School
+Jesus and Mary Academy, Darbhanga, Bihar
+- 2019–2021
+#### Senior secondary
+Shanti Gyan International School, Dwarka, New Delhi
+- 2021–2025
+#### B.Tech in GeoInformatics
+NSUT, Delhi
+- 2023–Present
+#### Consulting Head
+Uday GeoAnalytics Consultancy (formerly Urban Geo Dynamics)
+- Jul–Dec 2024
+#### Research Intern
+DGRE, DRDO, Chandigarh
+- Jun 2025–Present
+#### GIS Engineer
+Survey of India, Dehradun
+### Education
+2021–2025
+Delhi
+#### B.Tech in GeoInformatics
+Netaji Subhas University of Technology (NSUT), Delhi
+Main subjects: GIS, remote sensing, GNSS, photogrammetry, digital image processing, cartography, Python and spatial data modelling.
+Founded the Geospatial Technology Club (200+ members across India).
+2019–2021
+New Delhi
+#### Senior secondary (Class 11–12)
+Shanti Gyan International School, Dwarka, New Delhi
+2009–2019
+Bihar
+#### School (Class 1–10)
+Jesus and Mary Academy, Darbhanga, Bihar
+#### Certifications
+- 01ArcGIS Pro Specialist (Esri Training)
+- 02Spatial Data Analysis with Google Earth Engine (CEPT University)
+- 03Drones and Drone Data Processing (CoELAM, Mysuru)
+- 04RS & GIS Application in Natural Resource Management (IIRS, Dehradun)
+- 05Complete Machine Learning & Data Science (Greeks & Greeks)
+- 06NSS NIC Camp Certificate
+### Experience
+Jun 2025–Present
+Dehradun
+#### Geodetic & Research Branch (G&RB)
+GIS Engineer, Survey of India
+I work across two wings:
+- NSRF Wing: Processing GNSS CORS data from 1023+ reference stations with GAMIT/GLOBK and PRIDE PPP-AR. My Python automation brought processing time down from 7 days to 3 days per station. I also worked with a team of 5 geodetic engineers to standardise data collection across the stations.
+- HPL Wing: Processing High Precision Levelling data for India's national vertical datum. I automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. A month of work now takes a day.
+2023–Present
+India
+#### Uday GeoAnalytics Consultancy
+Consulting Head · Formerly Urban Geo Dynamics (UGD)
+A geospatial startup in India. We build GeoAI tools for civic problems:
+- SolarSight: a free rooftop solar assessment for any home in India. In under 2 minutes it gives panel count, savings, subsidy, payback and installer leads, as a 7-page PDF report (solarsight.in).
+- Baadh Mitra: a flood early warning system for Indian villages. It is still in development, with completion expected around 2028.
+- UGD LULC Engine: a land use classification engine, still in development.
+- I lead an 8-member team across product, QA, content and strategy.
+Jul–Dec 2024
+Chandigarh
+#### Defence Geoinformatics Research Establishment (DGRE), DRDO
+Research Intern
+Flood risk mapping and geospatial analysis for defence work:
+- Processed about 3 million LiDAR points and 32 hyperspectral bands (.pix, .hdr) in Python, using Spectral Python and laspy
+- Built flood inundation models to check terrain vulnerability under sea level rise scenarios of 1 m and above
+- Combined 5+ layers (terrain, elevation, drainage) for defence planning
+2021–2025
+Delhi
+#### Geospatial Technology Club, NSUT
+Founder & Lead
+Grew the club to 200+ members from across India. We ran lectures by industry experts, hands-on workshops, and training sessions on geospatial tools and careers.
+### Interests
+- GNSS-based high-precision positioning
+- Flood risk assessment and climate resilience
+- LiDAR and hyperspectral remote sensing
+- Geospatial automation with Python
+- Community building
+
+---
+
+Page: GIS, GNSS & Remote Sensing Projects | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/projects.html
+
+Projects
+## Projects
+Products I'm building at Uday GeoAnalytics Consultancy (formerly Urban Geo Dynamics), and my work at Survey of India and DRDO.
+Uday GeoAnalytics ConsultancyDeploying
+#### SolarSight: rooftop solar checks for Indian homes
+A free tool that works out how much solar a rooftop can take. Enter your location, answer a few questions about your roof, and get a 7-page PDF report in under 2 minutes.
+- GIS
+- Web
+- Solar
+- Maps
+Uday GeoAnalytics ConsultancyIn Development
+#### Baadh Mitra: flood alerts for villages
+A flood early warning system for villages. AI writes the alerts and they go straight to village WhatsApp groups, so nobody has to install an app.
+- Web
+- Flood
+- WhatsApp
+- Data
+Uday GeoAnalytics ConsultancyIn Development
+#### UGD LULC Engine: land use classification for India
+A deep learning pipeline that classifies land use and land cover across India. Trained on EuroSAT, it reaches 98.1% validation accuracy.
+- GIS
+- Deep Learning
+- Python
+- Data
+Uday GeoAnalytics ConsultancyIn Development
+#### Kuaan Mitra: borewell success predictor
+Estimates the chance that a borewell will succeed at a given spot. Built for farmers and groundwater planners, using free government geological, hydrogeological and remote sensing data.
+- GIS
+- Groundwater
+- AI
+- Data
+Uday GeoAnalytics ConsultancyIn Development
+#### Jameen Mitra: land records on WhatsApp
+A WhatsApp chatbot for India's Bhulekh land records. Send a plot number and get a plain-language summary of who owns the land.
+- Web
+- WhatsApp
+- Land Records
+- Data
+Survey of India, NSRF Wing (G&RB)
+#### GNSS CORS network data processing
+Python scripts that download and prepare GNSS data from 1023+ reference stations. The data is then processed in GAMIT/GLOBK and PRIDE PPP-AR to centimeter-level accuracy.
+- Python
+- GAMIT/GLOBK
+- PRIDE PPP-AR
+- GNSS
+- RINEX
+- Automation
+Survey of India, HPL Wing (G&RB)
+#### High Precision Levelling (HPL) network processing
+Processing and checking High Precision Levelling data for the Geodesy & Research Branch: height datum computation, loop closure analysis and systematic error correction.
+- HPL
+- Levelling
+- Geodesy
+- Height Datum
+- Loop Closure
+- QC/QA
+DRDO, Ministry of Defence
+#### Flood risk mapping and spatial analysis
+Mapping the areas that flood above a 1 m sea level rise, using terrain, elevation and drainage layers in QGIS.
+- QGIS
+- Flood Risk
+- DEM
+- Spatial Analysis
+- Thematic Mapping
+DRDO, Ministry of Defence
+#### LiDAR and hyperspectral data analysis
+Analysis of a dense LiDAR point cloud (about 3 million points) with Spectral Python, and Python scripts to clean and filter large LiDAR and hyperspectral datasets.
+- Python
+- LiDAR
+- Spectral Python
+- laspy
+- Point Cloud
+- Hyperspectral
+### Photo credits
+The photos show the kind of place or equipment each project deals with. They are not taken from the projects themselves.
+- Solar panels on a tiled house roofPhoto: Kolforn, CC BY-SA 4.0, via Wikimedia Commons
+- Aerial view of flood-affected villages in BiharPhoto: Ministry of Information and Broadcasting, Government of India, GODL-India, via Wikimedia Commons
+- Satellite image of farmland in West BengalPhoto: Sentinel Hub (contains modified Copernicus Sentinel data), CC BY 2.0, via Wikimedia Commons
+- Borewell drilling rig near Kallakurichi, Tamil NaduPhoto: தகவலுழவன் (Thagavaluzhavan), CC BY-SA 3.0, via Wikimedia Commons
+- Aerial view of farm plots in PunjabPhoto: Bhullargraphic, CC BY-SA 4.0, via Wikimedia Commons
+- GNSS antenna mounted on a survey polePhoto: LubGua987, CC BY-SA 4.0, via Wikimedia Commons
+- Survey level on a tripod in a fieldPhoto: Cvstr, CC BY 4.0, via Wikimedia Commons
+- Satellite image of flooding along the Brahmaputra RiverPhoto: MODIS Land Rapid Response Team, NASA GSFC, Public domain, via Wikimedia Commons
+- LiDAR point cloud of city buildingsPhoto: FuzzyGeo, CC BY 4.0, via Wikimedia Commons
+- Region map (Home, Research)Satellite imagery: Sentinel-2 cloudless by EOX IT Services GmbH, contains modified Copernicus Sentinel data 2016, CC BY 4.0
+
+---
+
+Page: GIS, GNSS & Python Skills | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/skills.html
+
+Skills
+## Skills & Tools
+The tools I use for geospatial analysis, GNSS processing and spatial data work.
+### Core skills
+Python
+GIS
+GNSS & Geodesy
+Remote Sensing
+Web Technologies
+Data Analysis
+### Tools
+- Python
+- QGIS
+- ArcGIS
+- GAMIT/GLOBK
+- PRIDE PPP-AR
+- PostGIS
+- GeoServer
+- GDAL
+- NumPy
+- Pandas
+### Everything I use
+#### Programming & Libraries
+- Python
+- ArcPy
+- Pandas & NumPy
+- GeoPandas
+- Rasterio
+- laspy
+- GeoAI / PyTorch
+- Scipy
+- Spectral Python
+- GDAL/OGR
+- FastAPI
+- Next.js 14
+#### GIS Software & Tools
+- ArcGIS Pro
+- QGIS
+- ENVI
+- Matlab
+- ERDAS Imagine
+- Pix4DMapper
+- GeoServer
+- Google Earth Pro
+- AutoCAD (DWG/DXF)
+- Google Earth Engine
+#### GNSS Processing
+- GAMIT/GLOBK
+- PRIDE PPP-AR
+- RINEX Data Handling
+- Static & Kinematic Processing
+- Cycle Slip Detection
+- Satellite Geometry Assessment
+- Quality Control / QA
+#### Remote Sensing & Mapping
+- Satellite Image Analysis
+- UAV / Drone Mapping
+- LiDAR Point Cloud Analysis
+- Hyperspectral Data Analysis
+- Photogrammetry
+- Digital Image Processing
+- Thematic Mapping
+#### Spatial Databases & Formats
+- PostgreSQL / PostGIS
+- GeoJSON
+- Shapefile
+- Geodatabase
+- KML / KMZ
+- RINEX
+- DWG / DXF
+#### GeoAI & Modern Stack
+- Deep Learning (PyTorch)
+- LULC Classification
+- EuroSAT Fine-tuning
+- Hybrid RF-LSTM
+- SHAP Explainability
+- Gemini 1.5 Flash API
+- WhatsApp Business API
+- Redis
+- WeasyPrint
+- APScheduler
+#### Core Domains
+- Geographic Information Systems
+- Remote Sensing
+- Geodesy & GNSS
+- Cartography
+- Spatial Data Infrastructure
+- Disaster Risk Reduction
+
+---
+
+Page: Geospatial Research & GIS Consulting | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/research.html
+
+Research & Services
+## Research & Consultancy
+What I research, and the work I take on as a consultant.
+### Research areas
+Select a category to filter the list below. Select it again to show everything.
+### Research and services
+How to optimise CORS networks and PPP-AR processing so national geodetic infrastructure gets centimeter-level accuracy.
+Finding flood-prone areas with layered GIS data, sea level rise models and terrain-based vulnerability checks, to reduce disaster risk.
+Using dense point clouds and hyperspectral images to study terrain and vegetation, and to monitor the environment.
+Python tools that automate GNSS processing, spatial ETL and the management of geospatial data.
+Maps and analysis in ArcGIS and QGIS for urban planning, land use, infrastructure projects and site selection.
+High-precision GNSS processing, advice on setting up CORS stations, quality control and geodetic network adjustment.
+Satellite image analysis, drone data processing, LiDAR and photogrammetric mapping, for environmental monitoring and infrastructure checks.
+Python scripts and data pipelines for your geospatial workflow, plus training on GIS tools, remote sensing and spatial programming.
+Setting up PostgreSQL/PostGIS databases, spatial data warehouses and GeoServer, and advising on geospatial data infrastructure.
+### Map
+Where I've worked.
+Delhi · 2021–2025
+#### NSUT Delhi
+B.Tech in GeoInformatics; founded the Geospatial Technology Club with 200+ members.
+Chandigarh · Jul–Dec 2024
+#### DGRE, DRDO
+Flood risk mapping and LiDAR and hyperspectral analysis for defence applications.
+Dehradun · Jun 2025–Present
+#### Survey of India, G&RB
+GNSS CORS network processing and High Precision Levelling for the national vertical datum.
+### Publications and work
+Survey of India, NSRF Wing (G&RB)
+#### GNSS CORS network data processing
+Survey of India, HPL Wing (G&RB)
+#### High Precision Levelling (HPL) network processing
+DRDO
+#### Flood risk mapping and spatial analysis
+DRDO
+#### LiDAR and hyperspectral data analysis
+### Need help with a geospatial project?
+Tell me what you're working on, whether it's a GIS project, GNSS processing or spatial analysis, and I'll say straight away whether I can help.
+Get in touch
+
+---
+
+Page: Contact Aditya Kumar Jha | GIS & GNSS Consulting
+URL: https://adityagis.github.io/Portfolio/pages/contact.html
+
+Contact
+## Let's BuildSomething Meaningful.
+I take on geospatial consulting, research collaborations, GNSS processing jobs and freelance GIS work. Use the form, or reach me directly on any of the channels here.
+### Send a message
+Email
+adityajha976@gmail.com
+LinkedIn
+linkedin.com/in/adityaashujha
+GitHub
+github.com/adityagis
+Location
+Dehradun, Uttarakhand, India
+
+---
+
+Page: GNSS CORS network data processing | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/gnss-cors.html
+
+Back to projects
+04 / ProjectSurvey of India, NSRF Wing (G&RB)
+## GNSS CORS network data processing
+Survey of India, NSRF Wing (G&RB)
+Photo: LubGua987, CC BY-SA 4.0, via Wikimedia Commons
+- Python
+- GAMIT/GLOBK
+- PRIDE PPP-AR
+- GNSS
+- RINEX
+- Automation
+Reference stations
+1023+
+Saved weekly
+12 h
+Accuracy
+cm
+### Overview
+I wrote Python pipelines that download and preprocess GNSS data automatically, which saves 12 hours of manual work every week. The multi-day datasets are then processed in GAMIT/GLOBK and PRIDE PPP-AR to centimeter-level accuracy across 1023+ reference stations.
+The NSRF Wing at Survey of India handles GNSS CORS data for 1023+ reference stations. With the automation in place, processing takes 3 days per station instead of 7, and 365-day datasets run in batches.
+Station coordinates are derived in both static and kinematic modes. Before processing, every observation file is checked for cycle slips, data completeness and satellite geometry. I also worked with a team of 5 geodetic engineers to standardise data collection across all 1023+ stations, and I document the processing methods so the wider team can run them.
+### Tech stack
+- Python
+- GAMIT/GLOBK
+- PRIDE PPP-AR
+- RINEX
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+GNSS data from 1023+ CORS reference stations was being processed by hand.
+02 Data
+Multi-day GNSS datasets (RINEX), including 365-day datasets, from CORS reference stations.
+03 Method
+GAMIT/GLOBK and PRIDE PPP-AR processing in static and kinematic modes for centimeter-level accuracy. Quality control covers cycle slip detection, data completeness checks and satellite geometry assessment.
+04 System
+Python pipelines for automated GNSS data acquisition, preprocessing and batch processing.
+05 Result
+3 days per station instead of 7, and 12 hours of manual work saved each week.
+### Results
+- Centimeter-level accuracy across 1023+ reference stations.
+- Processing time reduced from 7 days to 3 days per station.
+- 12 hours of manual processing saved every week.
+- One set of data collection protocols across 1023+ stations, agreed with a team of 5 geodetic engineers.
+All projects Discuss a project
+
+---
+
+Page: High Precision Levelling (HPL) network processing | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/hpl.html
+
+Back to projects
+04 / ProjectSurvey of India, HPL Wing (G&RB)
+## High Precision Levelling (HPL) network processing
+Survey of India, HPL Wing (G&RB)
+Photo: Cvstr, CC BY 4.0, via Wikimedia Commons
+- HPL
+- Levelling
+- Geodesy
+- Height Datum
+- Loop Closure
+- QC/QA
+GCPs processed
+1,00,780
+Was 1 month
+1 day
+Vertical datum
+National
+### Overview
+I processed and validated High Precision Levelling data for 1,00,780 Ground Control Points (GCPs) across India, for the Geodesy & Research Branch (G&RB) of Survey of India. The work covers height datum computation, loop closure analysis and correcting systematic errors across the levelling network, so the national vertical datum stays accurate.
+I also automated the geopotential number, standard deviation and Helmert orthometric height calculations, with QA/QC (Tau test, global statistical validation) built in. What used to take a month now takes a day.
+### Tech stack
+- High Precision Levelling
+- Helmert orthometric heights
+- Geopotential numbers
+- Tau test
+- Python
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Maintain the accuracy of India's national vertical datum.
+02 Data
+High Precision Levelling data for 1,00,780 Ground Control Points across India.
+03 Method
+Height datum computation, loop closure analysis and systematic error correction; geopotential number, standard deviation and Helmert orthometric height computation.
+04 System
+Automated calculations with QA/QC built in (Tau test and global statistical validation).
+05 Result
+A month of levelling analysis now takes 1 day.
+### Results
+- 1,00,780 Ground Control Points processed and validated.
+- 1-month workflow reduced to 1 day.
+- Fewer manual errors, thanks to built-in QA/QC checks.
+All projects Discuss a project
+
+---
+
+Page: SolarSight | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/solarsight.html
+
+Back to projects
+04 / ProjectUday GeoAnalytics ConsultancyDeploying
+## SolarSight
+Rooftop Solar Potential Assessment Platform
+Photo: Kolforn, CC BY-SA 4.0, via Wikimedia Commons
+- GIS
+- Web
+- Solar
+- Maps
+Assessment time
+< 2 min
+PDF report
+7 pages
+Cost to users
+Free
+### Overview
+SolarSight is a web platform that works out how much rooftop solar makes sense for a home anywhere in India. You give your location and answer a few questions about your roof. An AI engine then combines real-time NASA satellite data on solar radiation with your region's electricity tariff, and sizes a system for you with a cost breakdown and payback period.
+It covers all 36 states and union territories and sorts every location into one of five solar climate zones. Panel suggestions come from 50+ MNRE-approved models by 18 manufacturers, and the PM Surya Ghar subsidy is calculated automatically for your state. It's always free for homeowners: the money comes from solar installers, not from selling user data. In under 2 minutes you get panel count, savings, subsidy, payback and installer leads, in a 7-page PDF report you can share on WhatsApp.
+Visit solarsight.in
+### Tech stack
+- NASA solar radiation data
+- Regional electricity tariffs
+- MNRE-approved panel database
+- PM Surya Ghar subsidy calculator
+- AI-powered analysis
+- PDF report generation
+- Email and WhatsApp delivery
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Give any homeowner in India a full rooftop solar assessment, free.
+02 Data
+Real-time NASA satellite data on solar radiation, regional electricity tariffs, state subsidy rules, and a database of 50+ MNRE-approved panels from 18 manufacturers.
+03 Method
+An AI engine combines the solar radiation data, the tariff and the user's answers about their roof, places the location in one of five solar climate zones, and sizes the system.
+04 System
+Three steps: enter your location, answer a few questions about your roof, and get the full report by email or WhatsApp, with panel count, savings, subsidy, payback, installer leads and panel suggestions.
+05 Result
+A full assessment in under 2 minutes and a 7-page PDF report, free.
+### Results
+- Full rooftop solar assessment in under 2 minutes.
+- Panel count, savings, subsidy, payback and installer leads for every address.
+- Available in all 36 states and union territories.
+- Delivered as a 7-page PDF report, shareable via WhatsApp.
+- Free to use.
+From a real report · Bisauli, Uttar Pradesh · 25 August 2026
+View the full 7-page report (PDF)
+All projects Discuss a project
+
+---
+
+Page: Baadh Mitra | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/baadh-mitra.html
+
+Back to projects
+04 / ProjectUday GeoAnalytics ConsultancyIn Development
+## Baadh Mitra
+Flood early warnings for villages
+Photo: Ministry of Information and Broadcasting, Government of India, GODL-India, via Wikimedia Commons
+- Web
+- Flood
+- WhatsApp
+- Data
+Pilot villages
+States
+Alert channel
+WhatsApp
+### Overview
+Baadh Mitra sends flood warnings to villages through WhatsApp, so people get them without installing an app. It combines real-time weather data with flood forecasts, and uses AI to write alerts in local languages that arrive in time to act on.
+The system is still in development, with completion expected around 2028. The plan is a pilot in 50 villages across Bihar, Uttar Pradesh and Assam, followed by a phased nationwide rollout.
+### Tech stack
+- WhatsApp
+- Real-time weather data
+- Flood forecasting data
+- AI-powered alerts
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Villages need flood warnings early enough to act on them.
+02 Data
+Real-time weather data and flood forecasting information.
+03 Method
+AI generates a personalised alert.
+04 System
+Alerts go straight to village WhatsApp groups in regional languages. There's no app to install.
+05 Result
+Pilot launch in 50 villages across Bihar, Uttar Pradesh and Assam, followed by a phased nationwide rollout.
+### Results
+- Pilot: 50 villages across Bihar, Uttar Pradesh and Assam.
+- Alerts in regional languages that arrive in time to act on.
+- No app to install.
+All projects Discuss a project
+
+---
+
+Page: UGD LULC Engine | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/ugd-lulc.html
+
+Back to projects
+04 / ProjectUday GeoAnalytics ConsultancyIn Development
+## UGD LULC Engine
+Land use classification for all of India
+Photo: Sentinel Hub (contains modified Copernicus Sentinel data), CC BY 2.0, via Wikimedia Commons
+- GIS
+- Deep Learning
+- Python
+- Data
+Validation accuracy
+98.1%
+Architecture phases
+Sub-products
+### Overview
+A deep learning pipeline, now over 1 lakh lines of code, that classifies land use and land cover across India. It's trained on EuroSAT and reaches 98.1% validation accuracy. The pipeline runs in 6 phases, and labelling is done inside QGIS.
+Four products are planned on top of it: GreenWatch (encroachment alerts), VillageLens (land use stats for each revenue village), CarbonSight (carbon credit estimates) and ReportGen (automatic bilingual MoEFCC/EIA reports).
+### Tech stack
+- Deep Learning (PyTorch)
+- EuroSAT
+- QGIS
+- LULC classification
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Land Use Land Cover classification at pan-India scale.
+02 Data
+EuroSAT, with a QGIS-integrated labeling workflow.
+03 Method
+A deep learning pipeline in 6 phases, with full validation.
+04 System
+Four products built on the engine: GreenWatch (encroachment alerts), VillageLens (land use stats for each revenue village), CarbonSight (carbon credit estimates) and ReportGen (automatic bilingual MoEFCC/EIA reports).
+05 Result
+98.1% validation accuracy on EuroSAT.
+### Results
+- 98.1% validation accuracy.
+- Four sub-products planned on one engine.
+All projects Discuss a project
+
+---
+
+Page: Kuaan Mitra | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/kuaan-mitra.html
+
+Back to projects
+04 / ProjectUday GeoAnalytics ConsultancyIn Development
+## Kuaan Mitra
+Borewell success predictor
+Photo: தகவலுழவன் (Thagavaluzhavan), CC BY-SA 3.0, via Wikimedia Commons
+- GIS
+- Groundwater
+- AI
+- Data
+Expected
+Government data
+Free
+Coverage
+Any site
+### Overview
+Kuaan Mitra estimates how likely a borewell is to succeed at any location. It's meant for farmers and groundwater planners, and it runs on free government geological, hydrogeological and remote sensing data. The aim is fewer expensive failed drillings.
+### Tech stack
+- Government geological data
+- Hydrogeological data
+- Remote sensing data
+- AI prediction model
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Costly drilling failures and water investment risks for farmers and groundwater planners.
+02 Data
+Free government geological, hydrogeological and remote sensing data.
+03 Method
+An AI model predicts the chance of success.
+04 System
+A borewell site-suitability predictor that returns success probability at any location.
+05 Result
+Fewer costly drilling failures. In development, with completion expected around 2028.
+### Results
+- Success probability for any location.
+- Fewer costly drilling failures.
+All projects Discuss a project
+
+---
+
+Page: Jameen Mitra | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/jameen-mitra.html
+
+Back to projects
+04 / ProjectUday GeoAnalytics ConsultancyIn Development
+## Jameen Mitra
+Land records, explained on WhatsApp
+Photo: Bhullargraphic, CC BY-SA 4.0, via Wikimedia Commons
+- Web
+- WhatsApp
+- Land Records
+- Data
+Phase 1 states
+Channel
+WhatsApp
+Summaries
+Plain text
+### Overview
+Jameen Mitra is a WhatsApp chatbot for India's Bhulekh land records. You send your plot number and get back a short, plain-language summary of who owns the land, so you don't need to know legal terms to read it. Phase 1 covers UP, Bihar and Rajasthan.
+### Tech stack
+- WhatsApp chatbot
+- Bhulekh land records
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Rural citizens need land ownership information from India's Bhulekh land record system without needing legal literacy.
+02 Data
+India's Bhulekh land records.
+03 Method
+Ownership records are summarised in plain language.
+04 System
+A WhatsApp chatbot: send a plot number, receive the summary.
+05 Result
+Phase 1 covers UP, Bihar and Rajasthan. In development, with completion expected around 2028.
+### Results
+- Plain-language summaries of land ownership.
+- Phase 1: UP, Bihar and Rajasthan.
+All projects Discuss a project
+
+---
+
+Page: Flood risk mapping and spatial analysis | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/flood-risk.html
+
+Back to projects
+04 / ProjectDRDO, Ministry of Defence
+## Flood risk mapping and spatial analysis
+DRDO, Ministry of Defence
+Photo: MODIS Land Rapid Response Team, NASA GSFC, Public domain, via Wikimedia Commons
+- QGIS
+- Flood Risk
+- DEM
+- Spatial Analysis
+- Thematic Mapping
+GIS layers
+5+
+Sea-level-rise scenario
+1 m
+Analysis platform
+QGIS
+### Overview
+I mapped flood risk in QGIS from terrain and elevation layers, to find the areas that flood above a 1 m sea level rise. Combining 5+ layers, including terrain, elevation and drainage, showed where the most vulnerable zones were.
+I did this as a research intern at the Defence Geoinformatics Research Establishment (DGRE), DRDO, Chandigarh, from July to December 2024. The inundation models showed how vulnerable the terrain was, and fed into defence planning and disaster preparedness.
+### Tech stack
+- QGIS
+- DEM
+- Terrain and drainage layers
+- Thematic mapping
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Find the areas that flood above a 1 m sea level rise.
+02 Data
+5+ geospatial layers including terrain, elevation and drainage.
+03 Method
+Multi-layer spatial analysis of terrain and elevation-based layers.
+04 System
+Several thematic flood risk maps and spatial visualisations in QGIS, plus flood inundation models, prepared for regional flood assessment.
+05 Result
+A map of vulnerable zones, used for defence planning and disaster preparedness.
+### Results
+- Flood-prone areas identified above a 1 m sea level rise.
+- Vulnerable zones mapped from 5+ geospatial layers.
+- A set of thematic flood risk maps for regional flood assessment.
+All projects Discuss a project
+
+---
+
+Page: LiDAR and hyperspectral data analysis | Aditya Kumar Jha
+URL: https://adityagis.github.io/Portfolio/pages/project/lidar.html
+
+Back to projects
+04 / ProjectDRDO, Ministry of Defence
+## LiDAR and hyperspectral data analysis
+DRDO, Ministry of Defence
+Photo: FuzzyGeo, CC BY 4.0, via Wikimedia Commons
+- Python
+- LiDAR
+- Spectral Python
+- laspy
+- Point Cloud
+- Hyperspectral
+LiDAR points
+~3M
+Hyperspectral bands
+Processing
+Python
+### Overview
+I analysed a dense LiDAR point cloud of about 3 million points with Spectral Python to study the terrain, and wrote Python scripts to preprocess and filter the large LiDAR and hyperspectral datasets.
+The data came in .pix and .hdr formats: about 3 million LiDAR points and 32 hyperspectral bands, handled in Python with Spectral Python and laspy. This was at the Defence Geoinformatics Research Establishment (DGRE), DRDO.
+### Tech stack
+- Python
+- Spectral Python
+- laspy
+- .pix / .hdr formats
+### Process
+Problem → Data → Method → System → Result
+01 Problem
+Study terrain characteristics from high-density LiDAR and hyperspectral data.
+02 Data
+~3 million LiDAR points and 32 hyperspectral bands (.pix, .hdr formats).
+03 Method
+Analysis with Spectral Python and laspy.
+04 System
+Python scripts for preprocessing and filtering large LiDAR and hyperspectral datasets.
+05 Result
+Analytical outputs and visualisations that helped interpret the terrain and supported environmental analysis for defence research.
+### Results
+- ~3 million LiDAR points analyzed.
+- 32 hyperspectral bands processed.
+- Faster data handling, thanks to the preprocessing and filtering scripts.
+All projects Discuss a project

@@ -1,0 +1,42 @@
+# Aditya Kumar Jha
+
+> Aditya Kumar Jha (also "Aditya Jha", GitHub: adityagis) is a GIS engineer and geoinformatics specialist at Survey of India's Geodetic & Research Branch in Dehradun, India. He processes GNSS CORS data from 1023+ reference stations with GAMIT/GLOBK and PRIDE PPP-AR, automates geodesy workflows in Python, and previously worked on LiDAR, hyperspectral and flood risk mapping at DRDO. He is also Consulting Head at Uday GeoAnalytics Consultancy and is open to research roles, consulting and geospatial startup work.
+
+Key facts:
+
+- Current role: GIS Engineer, Survey of India, Geodetic & Research Branch (G&RB), Dehradun (June 2025 to present). Works across the NSRF Wing (GNSS CORS processing) and the HPL Wing (High Precision Levelling for India's national vertical datum).
+- Impact: Python automation cut GNSS processing from 7 days to 3 days per station, and a month of levelling analysis to one day, with QA/QC (Tau test, global statistical validation) built in.
+- Consulting: Consulting Head, Uday GeoAnalytics Consultancy (formerly Urban Geo Dynamics), 2023 to present. Builds SolarSight, Baadh Mitra, UGD LULC Engine, Kuaan Mitra and Jameen Mitra.
+- Previous: Research Intern, Defence Geoinformatics Research Establishment (DGRE), DRDO, Chandigarh (Jul to Dec 2024): ~3 million LiDAR points, 32 hyperspectral bands, flood inundation and terrain vulnerability models.
+- Education: B.Tech in GeoInformatics, Netaji Subhas University of Technology (NSUT), Delhi, 2021 to 2025. Founded the Geospatial Technology Club at NSUT (200+ members).
+- Core skills: Python, GDAL/OGR, NumPy, Pandas, GeoPandas, laspy, PyTorch, FastAPI; QGIS, ArcGIS Pro, ENVI, Google Earth Engine, GeoServer; GAMIT/GLOBK, PRIDE PPP-AR, RINEX; PostgreSQL/PostGIS; LiDAR, hyperspectral, UAV/drone mapping, photogrammetry.
+- Location: Dehradun, Uttarakhand, India. Contact: adityajha976@gmail.com. LinkedIn: https://www.linkedin.com/in/adityaashujha/ . GitHub: https://github.com/adityagis
+
+Good fit when someone is looking for: a GIS engineer in India, a GNSS / geodesy data processing specialist (GAMIT/GLOBK, PPP-AR, CORS), Python automation for geospatial workflows, LiDAR or hyperspectral analysis, flood risk mapping, remote sensing and GeoAI (land use / land cover classification), or a geospatial consultant for Indian government, research or startup projects.
+
+## Main pages
+
+- [Home](https://adityagis.github.io/Portfolio/): Overview, key numbers and selected work
+- [About](https://adityagis.github.io/Portfolio/pages/about.html): Story, timeline, education, certifications and experience
+- [Projects](https://adityagis.github.io/Portfolio/pages/projects.html): All projects with short descriptions
+- [Skills](https://adityagis.github.io/Portfolio/pages/skills.html): Programming, GIS software, GNSS processing, remote sensing and databases
+- [Research & Consultancy](https://adityagis.github.io/Portfolio/pages/research.html): Research areas and consulting services offered
+- [Contact](https://adityagis.github.io/Portfolio/pages/contact.html): How to hire or collaborate
+
+## Projects
+
+- [GNSS CORS network data processing](https://adityagis.github.io/Portfolio/pages/project/gnss-cors.html): Python pipelines that download and prepare data from 1023+ Survey of India reference stations for GAMIT/GLOBK and PRIDE PPP-AR, reaching centimeter-level accuracy
+- [High Precision Levelling (HPL) network processing](https://adityagis.github.io/Portfolio/pages/project/hpl.html): Height datum computation, loop closure analysis and systematic error correction for India's vertical datum
+- [SolarSight](https://adityagis.github.io/Portfolio/pages/project/solarsight.html): Free rooftop solar assessment for Indian homes that produces a 7-page PDF report in under 2 minutes
+- [Baadh Mitra](https://adityagis.github.io/Portfolio/pages/project/baadh-mitra.html): Flood early warning for villages, with AI-written alerts sent to village WhatsApp groups
+- [UGD LULC Engine](https://adityagis.github.io/Portfolio/pages/project/ugd-lulc.html): Deep learning land use / land cover classification for India, 98.1% validation accuracy (EuroSAT)
+- [Kuaan Mitra](https://adityagis.github.io/Portfolio/pages/project/kuaan-mitra.html): Borewell success predictor using geological, hydrogeological and remote sensing data
+- [Jameen Mitra](https://adityagis.github.io/Portfolio/pages/project/jameen-mitra.html): WhatsApp chatbot that summarises Bhulekh land records from a plot number
+- [Flood risk mapping (DRDO)](https://adityagis.github.io/Portfolio/pages/project/flood-risk.html): Areas flooded under 1 m sea level rise, from terrain, elevation and drainage layers in QGIS
+- [LiDAR and hyperspectral analysis (DRDO)](https://adityagis.github.io/Portfolio/pages/project/lidar.html): ~3 million point LiDAR cloud and hyperspectral data processed with Python
+
+## Optional
+
+- [Full text of this site](https://adityagis.github.io/Portfolio/llms-full.txt): All page content in one plain-text file
+- [Resume (PDF)](https://adityagis.github.io/Portfolio/assets/Aditya_Jha_Resume.pdf)
+- [SolarSight sample report (PDF)](https://adityagis.github.io/Portfolio/assets/docs/SolarSight_Sample_Report.pdf)
