@@ -246,8 +246,32 @@
       </header>
         <div class="grid">
           <div class="detail-body g-lg-8 g-md-8">
-            <p>I built this software with AI-assisted development (vibe coding). I brought the geodesy: what the adjustment has to do, which checks it has to pass, and what correct results look like. AI tools helped me write and change the code quickly. Every result was checked with the Tau test, the global statistical test and known values before the software went into use.</p>
-            <p>I write more about this way of working in <a href="vibe-coding-projects.html">Building projects from 0 to 100% with vibe coding</a>. The wider levelling work is on the <a href="../project/hpl.html">HPL project page</a>.</p>
+            <p>The software is a single Python program that runs on a normal departmental workstation with 16 GB of RAM. It reads the Survey of India HPL field workbooks directly and produces a master Excel workbook of adjusted heights, with no manual steps in between. It uses NumPy, SciPy, pandas, scikit-sparse (the CHOLMOD sparse solver from SuiteSparse) and openpyxl, all open source.</p>
+            <h3 style="margin-top:var(--s-6);margin-bottom:var(--s-3);font-size:var(--fs-h4);line-height:var(--lh-h4)">1. Never build the big matrix</h3>
+            <p>The textbook solution, X = (A&#7488;WA)<sup>&minus;1</sup>A&#7488;WL, needs the full normal matrix and its inverse in memory. For 1,00,000 unknown benchmarks each of those is a 1,00,000 &times; 1,00,000 matrix, about 80 GB. No office computer has that much memory, so older tools either crashed or slowed to a crawl.</p>
+            <p>A levelling observation only ever links two benchmarks, so each row of the design matrix has just two non-zero values. The software keeps every matrix in sparse form and never builds the dense normal matrix or its inverse. For the same 1,00,000-benchmark network it needs under 30 MB of memory instead of about 160 GB.</p>
+            <h3 style="margin-top:var(--s-6);margin-bottom:var(--s-3);font-size:var(--fs-h4);line-height:var(--lh-h4)">2. Solve with sparse Cholesky factorisation</h3>
+            <p>The normal equations are solved with a sparse Cholesky factorisation (N = LL&#7488;) using CHOLMOD, with a fill-reducing ordering that keeps the factor small. Solving then takes two quick triangular passes instead of an O(n&sup3;) matrix inversion.</p>
+            <p>Standard deviations need only the diagonal of the inverse, not the whole matrix. The software recovers that diagonal by solving against the stored factor in batches of 2,000 columns at a time. The residual cofactors needed for the Tau test are found the same way. This is what makes full statistical reporting possible on a network this size.</p>
+            <h3 style="margin-top:var(--s-6);margin-bottom:var(--s-3);font-size:var(--fs-h4);line-height:var(--lh-h4)">3. Check the network before solving</h3>
+            <p>If part of the network has no path to a Mean Sea Level control point, the equations cannot be solved. Older tools only failed after hours of computation, often with an error that looked like a software bug. My software first walks the observation graph outward from every MSL control point (a breadth-first search). Within seconds it lists every benchmark that is not connected to the datum, so the field party knows exactly which connections to survey again. Planning that remedial fieldwork now takes minutes instead of days.</p>
+            <h3 style="margin-top:var(--s-6);margin-bottom:var(--s-3);font-size:var(--fs-h4);line-height:var(--lh-h4)">4. Follow the Survey of India specification</h3>
+            <ul class="bullets detail-body" style="max-width:68ch;margin-top:var(--s-4);margin-bottom:var(--s-5)">
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)">Height differences are converted to geopotential differences using the mean gravity along each section.</li>
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)">Each observation's a priori standard deviation follows the cube-root distance rule of the SOI specification.</li>
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)">Geopotential numbers are converted to Helmert orthometric heights by fixed-point iteration.</li>
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)">The output workbook keeps the original SOI column headings and adds the adjusted values in labelled columns.</li>
+            </ul>
+            <h3 style="margin-top:var(--s-6);margin-bottom:var(--s-3);font-size:var(--fs-h4);line-height:var(--lh-h4)">5. Quality control built in</h3>
+            <ul class="bullets detail-body" style="max-width:68ch;margin-top:var(--s-4);margin-bottom:var(--s-5)">
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)"><strong>Global test:</strong> a two-tailed chi-square test on the a posteriori variance factor checks the adjustment as a whole.</li>
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)"><strong>Tau test:</strong> Pope's Tau test, with a Bonferroni correction, checks every observation for blunders.</li>
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)"><strong>QC sheet:</strong> every observation is listed in a QC worksheet, green when it passes and red when it is suspect. Flagged observations are never removed automatically. The surveyor reviews each one.</li>
+              <li style="font-size:var(--fs-body);line-height:var(--lh-body)"><strong>Audit trail:</strong> every run is saved in its own time-stamped folder, with the exact settings used, so any adjustment can be reproduced later.</li>
+            </ul>
+            <h3 style="margin-top:var(--s-6);margin-bottom:var(--s-3);font-size:var(--fs-h4);line-height:var(--lh-h4)">6. Verified before use</h3>
+            <p>On synthetic networks, the sparse solver matches a dense reference solution to machine precision. On real datasets from completed field seasons, its heights agree with the earlier departmental tools within their joint standard deviations. The method, the mathematics and these checks are set out in a technical authentication document I prepared for the Geodetic &amp; Research Branch in May 2026.</p>
+            <p>The wider levelling work is on the <a href="../project/hpl.html">HPL project page</a>.</p>
           </div>
         </div>
       </div>
