@@ -62,6 +62,9 @@
   var results = panel && panel.querySelector('.search-panel__results');
 
   var INDEX = [
+    { t: 'Geoinformatics and Geodesy: Aditya Kumar Jha', u: 'pages/notes/geoinformatics-geodesy.html', k: 'expertise gnss cors hpl python gis remote sensing lidar geoai', c: 'Guide' },
+    { t: 'HPL Adjustment Software', u: 'pages/notes/hpl-adjustment-software.html', k: 'levelling adjustment tau validation python geodesy', c: 'Technical note' },
+    { t: 'Building Geospatial Products', u: 'pages/notes/vibe-coding-projects.html', k: 'vibe coding geoai products', c: 'Technical note' },
     { t: 'Home', u: 'index.html', k: 'hero selected work capabilities statistics', c: 'Page' },
     { t: 'About', u: 'pages/about.html', k: 'story timeline education experience uday geoanalytics consultancy certifications interests nsut survey of india drdo', c: 'Page' },
     { t: 'Projects', u: 'pages/projects.html', k: 'work portfolio filter gis gnss web data research', c: 'Page' },

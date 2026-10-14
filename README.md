@@ -39,3 +39,11 @@ Then open http://localhost:8000.
 - GitHub: [@adityagis](https://github.com/adityagis)
 
 © 2026 Aditya Kumar Jha. Project photos are credited on the [Projects page](https://adityagis.github.io/Portfolio/pages/projects.html#photo-credits).
+
+## Discovery and maintenance
+
+- [Geoinformatics and geodesy expertise guide](https://adityagis.github.io/Portfolio/pages/notes/geoinformatics-geodesy.html)
+- [90-day visibility plan](docs/visibility-plan.md)
+- [Profile and social launch drafts](docs/social-launch-kit.md)
+- Before publication: `python scripts/check_seo.py`
+- After deployment: `python scripts/submit_indexnow.py` (notification does not guarantee indexing)

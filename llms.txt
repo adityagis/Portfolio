@@ -40,3 +40,7 @@ Good fit when someone is looking for: a GIS engineer in India, a GNSS / geodesy 
 - [Full text of this site](https://adityagis.github.io/Portfolio/llms-full.txt): All page content in one plain-text file
 - [Resume (PDF)](https://adityagis.github.io/Portfolio/assets/Aditya_Jha_Resume.pdf)
 - [SolarSight sample report (PDF)](https://adityagis.github.io/Portfolio/assets/docs/SolarSight_Sample_Report.pdf)
+
+## Expertise guide
+
+- [Geoinformatics, geodesy and GNSS work by Aditya Kumar Jha](https://adityagis.github.io/Portfolio/pages/notes/geoinformatics-geodesy.html): Topic guide linking GNSS, levelling, Python GIS, remote sensing and GeoAI case studies. Project metrics are specific to the stated datasets and workflows.

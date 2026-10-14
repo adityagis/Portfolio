@@ -24,7 +24,7 @@ User-agent: DuckAssistBot
 User-agent: MistralAI-User
 Allow: /
 
-# AI model training (lets models learn who Aditya Kumar Jha is)
+# Training crawlers: permission to crawl does not guarantee training or inclusion
 User-agent: GPTBot
 User-agent: ClaudeBot
 User-agent: Google-Extended
