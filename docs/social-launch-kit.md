@@ -1,6 +1,6 @@
 # Professional profile and launch copy
 
-Prepared for review, 14 October 2026. These drafts have not been posted to social accounts.
+Prepared for review, 14 October 2026. A shortened launch post was explicitly approved and published on LinkedIn: https://www.linkedin.com/feed/update/urn:li:activity:7516156320643809281/ . The remaining copy below is draft material.
 
 ## Shared identity
 

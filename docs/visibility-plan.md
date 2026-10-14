@@ -25,7 +25,7 @@ Track Google Search Console and Bing Webmaster Tools impressions, clicks, indexe
 - Regenerate the sitemap from actual canonical HTML pages, preserving old modification dates on unchanged content.
 - Add SEO validation for canonical URLs, unique titles, descriptions, one H1, JSON-LD, sitemap coverage, local resources and fragment links.
 - Run those checks on GitHub pushes and pull requests.
-- Set up a public IndexNow ownership key and submission script that checks the deployed key, sitemap and pages before notifying participating search engines.
+- Set up a public IndexNow ownership key and submission script that checks the deployed key, sitemap and pages before notifying participating search engines. Run it after successful GitHub Pages deployments and allow manual reruns.
 - Verify the URL-prefix property in Google Search Console and submit the sitemap. Set up Bing Webmaster Tools when account access and any required terms acceptance are available.
 
 AI text summaries are optional reader conveniences. They are not guaranteed ranking signals, AI inclusion mechanisms or replacements for crawlable HTML. Allowing a training crawler is permission to crawl; it does not prove training or future recommendations.
@@ -98,4 +98,4 @@ Record the review date, Google/Bing indexed counts, relevant query impressions a
 
 ## Commands for maintenance
 
-Run `python scripts/check_seo.py` before publishing. After GitHub Pages has deployed, run `python scripts/submit_indexnow.py` or manually start “Notify IndexNow after deployment” in GitHub Actions. Keep the verification tags and public key file in place. Check the deployment and submission status rather than treating a push as proof of successful publication.
+Run `python scripts/check_seo.py` before publishing. The “Notify IndexNow after deployment” workflow runs after successful GitHub Pages deployments; for a manual rerun, start that workflow or run `python scripts/submit_indexnow.py`. Keep the verification tags and public key file in place. Check the deployment and submission status rather than treating a push as proof of successful publication.
