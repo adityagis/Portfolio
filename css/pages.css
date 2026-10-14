@@ -246,3 +246,11 @@
   .webmap__stats { gap: var(--s-5); }
   .webmap__frame { aspect-ratio: 4 / 5; }
 }
+
+/* Long-form expertise guide */
+.expertise-guide .detail-body { max-width: 76ch; }
+.expertise-guide h2 { margin-bottom: var(--s-4); }
+.expertise-guide h2:not(:first-child) { margin-top: var(--s-8); }
+.expertise-guide h3 { margin-top: var(--s-5); margin-bottom: var(--s-3); }
+.expertise-guide nav { margin-top: var(--s-5); }
+.expertise-guide nav ul { padding-left: var(--s-5); list-style: disc; }

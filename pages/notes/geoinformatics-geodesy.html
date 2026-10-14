@@ -190,14 +190,14 @@
     </div>
   </div>
 
-  <main id="main">
+  <main id="main" class="expertise-guide">
 <section class="page-head"><div class="container">
 <p class="mono">Expertise / Geoinformatics</p>
 <h1 class="page-head__title">Geodesy, GNSS and geoinformatics work by Aditya Kumar Jha</h1>
 <p class="page-head__lead">A guide to my project work in GNSS CORS processing, high precision levelling, Python GIS automation, remote sensing and GeoAI.</p>
 <p>By <a href="../about.html">Aditya Kumar Jha</a> · Updated <time datetime="2026-10-14">14 October 2026</time></p>
 </div></section>
-<section class="section"><div class="container">
+<section class="section"><div class="container detail-body">
 <h2 id="overview">From observations to usable spatial information</h2>
 <p>I am a GIS engineer based in Dehradun, India, with a B.Tech in GeoInformatics from NSUT Delhi. My portfolio describes work at Survey of India's Geodetic &amp; Research Branch and an earlier research internship at DGRE, DRDO. I also build geospatial products through Uday GeoAnalytics Consultancy. This page connects those areas to the project descriptions and technical notes where the methods, tools and reported outcomes are explained.</p>
 <p>My main focus is the overlap between geodesy and software: preparing observations, checking data quality, running processing workflows and making the results easier for a team to use. For collaboration, start with the relevant case study below and <a href="../contact.html">share your data type, coordinate reference system, intended output and project constraints</a>.</p>
@@ -205,7 +205,7 @@
 <li><a href="#gnss">GNSS, CORS and positioning</a></li><li><a href="#levelling">High precision levelling and vertical datums</a></li><li><a href="#python">Python automation for GIS and geodesy</a></li><li><a href="#remote-sensing">LiDAR, hyperspectral and flood mapping</a></li><li><a href="#geoai">GeoAI and land use / land cover</a></li><li><a href="#questions">Questions about my work</a></li>
 </ul></nav>
 </div></section>
-<section class="section section--surface"><div class="container">
+<section class="section section--surface"><div class="container detail-body">
 <h2 id="gnss">GNSS CORS processing with GAMIT/GLOBK and PRIDE PPP-AR</h2>
 <p>My GNSS work covers automated acquisition and preprocessing of RINEX observations, followed by processing in GAMIT/GLOBK and PRIDE PPP-AR. The case study describes multi-day and annual datasets, static and kinematic processing, and quality checks for cycle slips, completeness and satellite geometry.</p>
 <p>The central engineering problem is repeatability across a CORS network. A useful pipeline needs the same preparation steps and quality checks to run consistently, while preserving the information needed to investigate station-specific issues. My portfolio reports a reduction from seven to three days of processing per station and twelve hours of manual work saved each week in the described workflow. These are project-specific results, rather than a performance promise for every dataset.</p>
@@ -218,7 +218,7 @@
 <p>I use Python to connect data acquisition, preprocessing, computation and quality checks. Examples in this portfolio include GNSS batch processing, levelling calculations, LiDAR filtering and geospatial product workflows. My listed tools include NumPy, Pandas, GeoPandas, GDAL/OGR, PostgreSQL/PostGIS and FastAPI.</p>
 <p>For a new automation project, the useful starting point is an example input and a clearly defined output: file formats, coordinate reference system, processing steps, acceptance criteria and expected data volume. This makes it possible to discuss what should be automated, which checks must stay visible and how the workflow will be handed over. Public code and project documentation can be explored through <a href="https://github.com/adityagis">my GitHub profile</a>.</p>
 </div></section>
-<section class="section"><div class="container">
+<section class="section"><div class="container detail-body">
 <h2 id="remote-sensing">Remote sensing, LiDAR, hyperspectral analysis and flood risk mapping</h2>
 <p>At DGRE, DRDO, my portfolio describes preprocessing and analysis of a LiDAR point cloud of approximately three million points and hyperspectral data with 32 bands. Python tooling included laspy and Spectral Python. The project pages separate the point-cloud and hyperspectral work from the flood-risk mapping workflow.</p>
 <p>The flood mapping case study describes a QGIS scenario based on elevation, terrain and drainage layers, including a one-metre sea-level-rise scenario. It is presented as a spatial analysis project. A scenario map and an operational flood forecast serve different purposes; the underlying project page provides the context for interpreting the output.</p>
