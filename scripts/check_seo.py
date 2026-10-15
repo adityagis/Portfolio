@@ -1,7 +1,7 @@
 """Validate crawlable HTML, structured data, local resources and sitemap coverage."""
 import json
 import sys
-from datetime import date
+from datetime import date, datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
@@ -52,6 +52,29 @@ class Page(HTMLParser):
             self.in_schema = False
 
 
+def check_profile_dates(value, rel, errors):
+    if isinstance(value, list):
+        for item in value:
+            check_profile_dates(item, rel, errors)
+    elif isinstance(value, dict):
+        types = value.get('@type', [])
+        if isinstance(types, str):
+            types = [types]
+        if 'ProfilePage' in types:
+            for field in ('dateCreated', 'dateModified'):
+                if field not in value:
+                    continue
+                stamp = value[field]
+                try:
+                    parsed = datetime.fromisoformat(stamp.replace('Z', '+00:00'))
+                    if 'T' not in stamp or parsed.utcoffset() is None:
+                        raise ValueError('needs time and timezone')
+                except (ValueError, TypeError, AttributeError):
+                    errors.append(f'{rel}: ProfilePage {field} must be an ISO 8601 datetime with timezone')
+        for item in value.values():
+            check_profile_dates(item, rel, errors)
+
+
 def main():
     errors = []
     pages = {p: Page(p.read_text(encoding='utf-8')) for p in ROOT.rglob('*.html')}
@@ -73,7 +96,7 @@ def main():
             errors.append(f'{rel}: missing structured data')
         for schema in page.schemas:
             try:
-                json.loads(schema)
+                check_profile_dates(json.loads(schema), rel, errors)
             except ValueError as exc:
                 errors.append(f'{rel}: invalid JSON-LD: {exc}')
         for link in page.links:
