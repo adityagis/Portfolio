@@ -72,6 +72,7 @@
     { t: 'Skills', u: 'pages/skills.html', k: 'tools python qgis arcgis gamit globk pride ppp-ar postgis geoserver gdal numpy pandas', c: 'Page' },
     { t: 'Contact', u: 'pages/contact.html', k: 'email linkedin github location message hire', c: 'Page' },
     { t: 'SolarSight', u: 'pages/project/solarsight.html', k: 'uday geoanalytics consultancy urban geo dynamics solar rooftop urban geo dynamics', c: 'Project' },
+    { t: 'Delhi Smog Atlas', u: 'pages/project/delhi-smog-atlas.html', k: 'uday geoanalytics consultancy delhi air pollution smog aqi pm2.5 sentinel-5p no2 satellite stubble burning brick kilns web map', c: 'Project' },
     { t: 'Baadh Mitra', u: 'pages/project/baadh-mitra.html', k: 'uday geoanalytics consultancy urban geo dynamics flood early warning whatsapp village', c: 'Project' },
     { t: 'UGD LULC Engine', u: 'pages/project/ugd-lulc.html', k: 'uday geoanalytics consultancy urban geo dynamics land use land cover deep learning eurosat', c: 'Project' },
     { t: 'Kuaan Mitra', u: 'pages/project/kuaan-mitra.html', k: 'uday geoanalytics consultancy urban geo dynamics borewell groundwater', c: 'Project' },
